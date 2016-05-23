@@ -140,6 +140,43 @@
       .concluded {
         text-decoration: line-through;
       }
+      
+@media print {
+   h1 {
+      color: #000;
+      background: none;
+   }
+
+   nav, aside {
+      display: none;
+   }
+
+   body, article {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+   }
+
+   @page {
+      margin: 2cm;
+   }
+   
+   h2, h3 {
+   page-break-after: avoid;
+  }
+  
+  article {
+   page-break-before: always;
+  }
+  
+  ul, img {
+   page-break-inside: avoid;
+  }
+  
+  aside#dates {
+    display: none;
+  }
+}      
     </style>
   </head>
   <body>
