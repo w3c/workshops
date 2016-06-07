@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blockchain &amp; Web Position Paper</title>
+  <style>
+    body {
+      max-width: 50em;
+      margin: auto;
+      font-family: Verdana, sans-serif;
+      font-size: 1em;
+      color: black;
+      background: white;
+    }
+
+    .bio {
+      font-size: 1.1em;
+    }
+
+    h1 {
+      font-size: 1.4em;
+    }
+
+    h2 {
+      font-size: 1.3em;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    h4 {
+      font-size: 1.1em;
+    }
+
+    h5, 46 {
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Blockchain &amp; Web Position Paper</h1>
+
+  <p><b>Authors:</b> Dr. Gavin Wood (Director, Ethcore), Ethcore authors</p>
+
+
+  <p>Ethcore believes there is an increasing need for a zero-trust interaction system: entrusting our information to arbitrary entities on the internet was fraught with danger. The protocols and technologies on the Web, and even at large the Internet, served as a great technology preview. The workhorses of SMTP, FTP, HTTP(S), PHP, HTML, Javascript each helped contribute to the sort of rich cloud-based applications we see today. However, much of these protocols and technologies will have to be re-engineered according to our new understandings of interactions.</p>
+
+  <p>Ethcore reimagines the structure of the Web for the sorts of things that we already use it for, but with a fundamentally different model for the interactions between parties, a critical portion of which is the blockchain; we call this blockchain-and-web architecture “Web 3.0”. As a user of Web 3.0, all interactions will be carried out pseudonymously, securely and trustlessly. We believe the workshop can use our architecture for a blockchain-centric web in order to frame the discussions and determine clear use-cases, specific interaction plans for those use cases and further develop these into a prototype technology set. This should allow the group to determine what needs be altered, authored and standardised in order to build a web which actually makes sense with when combined with blockchains.</p>
+
+  <p>Our specific position is that the “blockchain” or consensus engine will interact with another 3 components, and all deserve to be discussed. In brief:</p>
+
+  <ul>  
+    <li>The consensus engine (rules of interaction) facilitates the knowledge of the client browser application (“dapp”) that future interactions will result in the enforcement exactly as specified. Consensus engines will be used for all trustful publications and alteration of information. This will happen through a completely generalised global transaction processing system the first workable example of which is the Ethereum project.</li>
+
+    <li>a decentralised, encrypted information publication system. All this does is take a short intrinsic address of some information (a hash) and return the information itself. This static publication system accounts for much of HTTP(S)'s job and all that of FTP.  In Web 3.0, this portion of the technology is used to publish and download any (potentially large) static portion of information. Because an incentivisation framework is intrinsic to the protocol, we become (at this level, anyway) DDoS-proof by design. </li>
+
+    <li>An identity-based pseudonymous low-level messaging system. This is used for communicating between people on the network. It uses strong-cryptography in order to make a number of guarantees about the messages; they can be encrypted with an identity's public key in order to guarantee only that identity can decode it. A shared secret can provide the opportunity to communicate securely. Addresses, where once user or port together with IP address, now become merely a hash. Actual physical routing would be carried out through a game-theoretic adaptive network system. Each peer attempts to maximise their value to other peers in the assertion that the other peers are valuable to them for the incoming information. A peer whose information is not valuable would be disconnected and their slot taken with a connection to some other, perhaps unknown (or perhaps second-degree), peer (in the traditional Web, this is much of the information that travels over HTTP in AJAX style implementations).</li>
+    
+    <li>The fourth component is the 'browser' and user interface. Using this consensus-based name resolution system, a URI can be reduced to the unique address of the front-end for that application (i.e. a hash). Through the information publication system, this can be expanded into a collection of files required for the front-end (e.g. an archive containing .html, .js, .css &amp; .jpg files). This is the static portion of the dapp (-let). We will see a move away from the traditional client-server URL model of addresses and instead start to see new-form addresses. Name resolution would be carried out by a consensus-engine-based contract and can trivially be redirected or augmented by the user. Periods would allow multiple levels of name resolution.</li>
+  </ul>
+
+  <p>Further discussion would include gathering and submitting dynamic but publicly available content whose provenance needs to be determined and which must be held immutably forever (there is a Javascript-based API for interacting with the consensus-engine). For gathering and submitting dynamic, potentially private, content that is necessarily volatile and subject to annihilation or lack of availability, the p2p-messaging-engine is used. We believe all of the above are important topics that should be explored in full to properly understand how the blockchain can best be amalgamated into the current web architecture.</p>
+
+</body>
+</html>

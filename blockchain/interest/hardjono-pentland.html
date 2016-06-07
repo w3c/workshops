@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>On Privacy-Preserving Identity within Future Blockchain Systems</title>
+  <style>
+    body {
+      max-width: 50em;
+      margin: auto;
+      font-family: Verdana, sans-serif;
+      font-size: 1em;
+      color: black;
+      background: white;
+    }
+
+    h1 {
+      font-size: 1.4em;
+    }
+
+    h2 {
+      font-size: 1.3em;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    h4 {
+      font-size: 1.1em;
+    }
+
+    h5, 46 {
+      font-size: 1em;
+    }
+
+    .bio {
+      font-size: 1.1em;
+    }
+
+    ol.lettered {
+      list-style-type: lower-alpha;
+    }
+
+    ol.refs {
+      list-style-type: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>On Privacy-Preserving Identity within Future Blockchain Systems</h1>
+  <h2>W3C Position Paper</h2>
+  <p><b>Authors:</b> <br>
+  Thomas Hardjono, <br>
+  Prof. Sandy Pentland <br>
+  MIT Connection Science &amp; Engineering</p>
+
+  <p>May 2016</p>
+
+  <h2>Summary</h2>
+
+  <p>Self-sourced (self-issued) identities offers a direction for solving privacy-preserving identity in large networks such as the new generation of blockchains currently being designed. Some cryptographic identity schemes offer strong privacy through identity anonymity and unlinkability of transactions. A new model for privacy-preserving identities is needed if blockchain systems are to operate at a global scale: it must allow entities in the ecosystem to (i) verify the "quality" or security of an identity, and (ii) to assess the relative "freedom" or independence of an identity from any given authority (e.g. government, businesses, etc.), and (iii) to assess the source of trust for a digital identity.</p>
+
+
+  <h2>I.  Limited Scale of Current Self-Sourced Identities</h2>
+
+  <p>Recent interest in the Bitcoin system <a rel="nofollow" href="#ref-3">[3]</a>  has rekindled interest in the long-time problem of self-issued digital identities. The notion of self-issued identities was first posed in the mid-1990s in the context of self-signed X509 certificates, Simple PKI (SPKI) <a rel="nofollow" href="#ref-2">[2]</a> and in the Pretty Good Privacy (PGP) system <a rel="nofollow" href="#ref-1">[1]</a>.</p>
+
+  <p>We believe that a more accurate term for self-issued digital identities is "self-sourced" identities. What matters in digital identities is not so much the form of the identity (e.g. email-address; RSA public keys; X509 certificates <a rel="nofollow" href="#ref-11">[11]</a>) but rather the source of trust for the provenance for the claimed identity.</p>
+
+  <p>In the Bitcoin system, users self-generate (e.g. using software) public key pairs, and transact by using the key-pair.  The Bitcoin system uses the term "address" for their identities, which is simply a cryptographic hash of the public-key of the key-holder (i.e. holder of the matching private key). The address scheme in Bitcoin (hash of public-key) is functionally equivalent to the plain public-key.  The use of public-key ("address") in Bitcoin as an identity scheme provides some degree of anonymity to the key-holder at the expense of scalability. The identity scheme in Bitcoin can be used only within the Bitcoin system.</p>
+
+  <p>This scalability limitation is also present in the PGP system <a rel="nofollow" href="#ref-1">[1]</a>  where a user self-issues their PGP key-pair. The user as the key-holder must provide their PGP public-key directly to their friends and colleagues, either in-person or through a public "key ownership declaration" event (e.g. "PGP key signing parties" at IETF face-to-face meetings).</p>
+
+  <p>Within the community of Bitcoin users and developers, one oft-cited positive feature of the system is the "anonymity" (pseudonymity) of key-holders through their use of self-sourced identities. In this line of thinking –- which we believe to be inherently self-limiting for scalability -– there is a perceived equivalence between anonymity (through the use self-sourced public-key pairs) and "independence from any trusted authority". </p>
+
+  <p>Furthermore, the current self-issued digital identities (in the form of self-generated public-key pairs) does not scale because it lacks integration with existing infrastructures -- both digital infrastructures and real-world infrastructures.</p>
+
+
+  <h2>II.  A New Model for Self-Sourced Identities</h2>
+
+  <p>A complete and scalable identity management system needs to ground identity in the real world, and must not rely solely and unconditionally on existing identity/service providers. We believe a new model is needed for "self-sourced identities" that provide privacy-preservation as well as scalability at the global Internet level. </p>
+
+  <p>A key feature of the new model is that it must allow entities in the ecosystem to (i) verify the "quality" or security of an identity, and (ii) to assess the relative "freedom" or independence of an identity from any given authority (e.g. government, businesses, etc.), and (iii) to assess the source of trust for a digital identity.</p>
+
+  <p>If anonymity is a requirement for self-source identities to fulfill the needs of user privacy, then true anonymity in digital identities requires more than self-issuance of a public-key pair (as it is the case today in the Bitcoin system <a rel="nofollow" href="#ref-3">[3]</a>). It requires that the identity also possess the feature of unlinkability or untraceability <a rel="nofollow" href="#ref-6">[6]</a>. And even if a digital identity has anonymity, unlinkability, it still requires the relying party (counter-party) to accept the identity. That is, the relying party must be able to assess the provenance and source of trust of a given anonymous self-sourced identity.</p>
+
+  <p>We believe a new model for digital identities for future blockchain systems is required, which is summarized in the following progressive steps:</p>
+
+  <ol>
+    <li>Strong provenance attributes: Begin with an existing identity which has a high degree of source of trust, where attributes have a high degree of provenance. This identity maybe issued by an existing Identity Provider or other trusted third party operating within a legal jurisdiction (e.g. Bank, Government, Service Provider, etc.).</li>
+
+    <li>Transitive source of trust: Use a privacy-preserving algorithm that translates the existing identity with strong provenance into an anonymous root-identity which carries-over the source of trust.</li>
+
+    <li>Self-issued derived identities: Provide users with the freedom (and algorithms/tools) to self-issue anonymous transaction-identities, each of which is cryptographically derived from the user’s root-identity. The source of trust from the root-identity must also be carried-over into the derived transaction-identity.</li>
+
+    <li>Privacy-preserving verification: Provide the Relying Parties (counter-party) with a privacy-preserving verification algorithms to validate the source of trust for any given (anonymous) transaction-identity. These verification algorithms must allow a relying party to establish a chain of provenance (from the self-issued transaction-identity all the way back to the origin attributes), while preserving the privacy of the owner of the identity.</li>
+
+    <li>Legal Trust Framework (LTF): Establish an identity ecosystem for blockchain based on a LTF for anonymous root-identities and anonymous transaction-identities.</li>  
+  </ol>
+    
+  <p>Our current efforts on the ChainAnchor system (see [4,5]) seeks to address these properties that are foundational to the proposed new model.</p>
+
+
+  <h2>III.  Legal Trust Framework for Verifiable Self-Sourced Identities</h2>
+
+  <p>A legal trust framework is a certification program that enables a party who accepts a digital identity credential (called the relying party) to trust the identity, security, and privacy policies of the party who issues the credential (called the identity service provider) and vice versa <a rel="nofollow" href="#ref-8">[8]</a>.</p>
+
+  <p>We believe the current LTFs as practiced in the industry (e.g. FICAM <a rel="nofollow" href="#ref-7">[7]</a> , OIX <a rel="nofollow" href="#ref-8">[8]</a>, SafeBioPharma <a rel="nofollow" href="#ref-9">[9]</a>)  can be extended to introduce special type of identity providers, called the  Root-Identity Provider (RiP) and the  Root-Identity Verifier (RiV) <a rel="nofollow" href="#ref-10">[10]</a>.</p>
+
+  <p>The Root-Identity Provider takes a user's existing identity which has a high degree of source of trust (step (1) above) and converts it using a privacy-preserving function into anonymous root-identity for the user (step (2) above). The user is then free to self-issue one or more anonymous transaction-identities to be used on the blockchain system with other users (relying parties).</p>
+
+  <p>The Root-Identity Verifier provides a validation service to which a relying-party may inquire about the status and source-grade of a given anonymous transaction-identity (step (4) above) prior to transacting.</p>
+
+  <p>In this context a LTF provides the following:</p>
+
+  <ol class="lettered">
+    <li>Network scalability: It allows any two parties to transact on the blockchain without prior engagement, thus achieving network scalability.</li>
+
+    <li>Provenance assessment: It allows a relying-party (counter-party) to assess the "worthiness" (provenance and quality) of an anonymous transaction-identity prior to commencing the transaction;</li>
+
+    <li>Cross-jurisdiction interoperability: It provides a legal foundation for anonymous root-identities and transaction-identities to be recognized in differing legal jurisdictions;</li>
+
+    <li>New business models: It incentivizes service-providers (including the Root-Identity Providers and the Root-Identity Verifiers) to develop new business models around new scalable services;</li>
+
+    <li>Risk assessment and risk management: It provides entities in the ecosystem with a means of legal recourse in unforeseen circumstances (e.g. attacks to the service; identity leaks; identity-data theft, provider negligence, etc.) as specified in the LTF operational contracts.</li>
+  </ol>
+
+  <h2>Authors</h2>
+
+  <h3>Thomas Hardjono</h3>
+
+  <p>Thomas Hardjono the Director of the MIT Internet Trust Consortium, within MIT Connection Science. He has been active in identity management and identity federation for nearly two decades now, starting from the mid-1990s working in the emerging X509 PKI industry as principal scientist at VeriSign which became the largest PKI provider in the world. His work included devices certificates for DOCSIS cable modems and for Wi-Fi devices, and his achievements included standing-up the first commercial root CA service for TPM1.2 secure hardware. He was chair of the TPM Infrastructure WG in the Trusted Computing Group, which was tasked to solve the integration of TPM management within Enterprise infrastructures. His work also expanded into the area of security assertions and claims management. He was active in the SAML2.0 community in the Liberty Alliance and in OASIS. He is currently the chair of the SAML2.0 Technical Committee. Thomas has also been instrumental in supporting the development of the MIT Kerberos open source software and the development of the OpenID-Connect 1.0 protocol (OIDC) for identity federation based on the OAuth2.0 framework.  He is the technical editor of the recently published User Managed Access (UMA 1.0) architecture for user-centric consent management based on OAuth2.0. Thomas was successful in standing-up the first OpenID-Connect service at a major university (oidc.mit.edu), and in representing MIT at various industry consortiums and standards organizations. Recently he was instrumental in standing-up the first Ripple digital currency validation server at a major university (<a rel="nofollow" href="http://rippled.media.mit.edu">rippled.media.mit.edu</a>). He is currently focusing on identities and identity management for blockchain systems, and on privacy-preserving computing.</p>
+
+
+  <h3>Prof Sandy Pentland</h3>
+
+  <p>Alex “Sandy” Pentland is founding faculty director of the MIT Connection Science Research Initiative, which uses network science to access and change real-world human behavior, and is the Toshiba Professor of Media, Arts, and Sciences at the Massachusetts Institute of Technology (MIT). He also holds a triple appointment at MIT in Media Arts and Sciences, Engineering Systems Division and with the Sloan School of Business. Sandy has helped create and direct MIT’s Media Lab, the Media Lab Asia, and the Center for Future Health. He chairs the World Economic Forum's Data Driven Development Council, is Academic Director of the Data-Pop Alliance, and is a member of the Advisory Boards for Google, Nissan, Telefonica, the United Nations Secretary General, Monument Capital, and the Minerva Schools. In 2012 Forbes named Sandy one of the “seven most powerful data scientists in the world”, along with Google founders and the CTO of the United States, and in 2013 he won the McKinsey Award from Harvard Business Review. He is among the most-cited computational scientists in the world, and a pioneer in computational social science, organizational engineering, wearable computing (Google Glass), image understanding, and modern biometrics. His research has been featured in Nature, Science, and Harvard Business Review, as well as being the focus of TV features on BBC World, Discover and Science channels. His most recent book is Social Physics, published by Penguin Press. Over the years Sandy has advised more than 50 PhD students. Almost half are now tenured faculty at leading institutions, with another one-quarter leading industry research groups and a final quarter are founders of their own companies. Sandy's research group and entrepreneurship program have spun off more than 30 companies to date, three of which are publicly listed and several that serve millions of poor in Africa and South Asia. Recent spin-offs have been featured in publications such as The Economist and The New York Times, as well as winning a variety of prizes from international development organizations.</p>
+
+
+
+  <h2>References</h2>
+
+  <ol class="refs">
+    <li id="ref-1"><a rel="nofollow" href="#ref-1">[1]</a>  D. Atkins, W. Stallings, P. Zimmerman, PGP Message Exchange Formats, IETF RFC1991, August 1996, Internet Engineering Task Force.</li>
+
+    <li id="ref-2"><a rel="nofollow" href="#ref-2">[2]</a>  C. Ellison et. al, SPKI Certificate Theory, IETF RFC2693, September 1999. Internet Engineering Task.  </li>
+
+    <li id="ref-3"><a rel="nofollow" href="#ref-3">[3]</a>  S. Nakamoto, Bitcoin: a Peer to Peer Electronic Cash system <a rel="nofollow" href="https://bitcoin.org/bitcoin.pdf">https://bitcoin.org/bitcoin.pdf</a>.</li>
+
+    <li id="ref-4"><a rel="nofollow" href="#ref-4">[4]</a>  T. Hardjono and A. Pentland, "ChainAnchor: Verifiable Anonymous Identities and Access Control in Permissioned Blockchains", manuscript in preparation (2016).</li>
+
+    <li id="ref-5"><a rel="nofollow" href="#ref-5">[5]</a>  T. Hardjono and N. Smith, "Cloud-Based Commissioning of Constrained Devices using Permissioned Blockchains", in Proceedings of the 2nd ACM International Workshop on IoT Privacy, Trust, and Security (IoTPTS 2016), May 2016.</li>
+
+    <li id="ref-6"><a rel="nofollow" href="#ref-6">[6]</a>  J. Camenisch and E. Van Herreweghen, "Design and implementation of the Idemix anonymous credential system," in Proceedings of the 9th ACM conference on Computer and communications security. ACM, 2002, pp. 21–30.</li>
+
+    <li id="ref-7"><a rel="nofollow" href="#ref-7">[7]</a>  FICAM, U.S. Federal Identity, Credential and Access Management (FICAM) Program, <a rel="nofollow" href="http://info.idmanagement.gov">http://info.idmanagement.gov</a></li>
+
+    <li id="ref-8"><a rel="nofollow" href="#ref-8">[8]</a>  OIX, OpenID Exchange, <a rel="nofollow" href="http://openidentityexchange.org">http://openidentityexchange.org</a> </li>
+
+    <li id="ref-9"><a rel="nofollow" href="#ref-9">[9]</a>  SAFE-BioPharma Association, Trust Framework Provider Services, <a rel="nofollow" href="http://www.safe-biopharma.org/SAFE_Trust_Framework.htm">http://www.safe-biopharma.org/SAFE_Trust_Framework.htm</a> </li>
+
+    <li id="ref-10"><a rel="nofollow" href="#ref-10">[10]</a>  T. Hardjono, D. Greenwood and S. Pentland," Towards a Trustworthy Digital Infrastructure for Core Identities and Personal Data Stores", ID360 Conference on Identity management, U of Texas, May 2013.</li>
+
+    <li id="ref-11"><a rel="nofollow" href="#ref-11">[11]</a>  C. Adams and S. Farrell, "Internet X.509 Public Key Infrastructure Certificate Management Protocols," RFC 2510, IETF, Mar. 1999, obsoleted by RFC 4210. </li>
+
+    <li id="ref-12"><a rel="nofollow" href="#ref-12">[12]</a>  OASIS, "Assertions and Protocols for the OASIS Security Assertion Markup Language (SAML) V2.0,  March 2005.</li>
+  </ol>
+
+</body>
+</html>

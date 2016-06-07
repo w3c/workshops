@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hierarchical Deterministic Keys</title>
+  <style>
+    body {
+      max-width: 50em;
+      margin: auto;
+      font-family: Verdana, sans-serif;
+      font-size: 1em;
+      color: black;
+      background: white;
+    }
+
+    .bio {
+      font-size: 1.1em;
+    }
+
+    h1 {
+      font-size: 1.4em;
+    }
+
+    h2 {
+      font-size: 1.3em;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    h4 {
+      font-size: 1.1em;
+    }
+
+    h5, 46 {
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hierarchical Deterministic Keys</h1>
+  <p><b>Author:</b> Kiara Robles</p>
+
+  <p>The innovation of the blockchain has solved many issues in the world of finance and payments, and Bitcoin achieved this without its own major intellectual breakthroughs. Bitcoin leveraged existing cryptography, public-key cryptography, hashing, peer to peer networks, to create a decentralized protocol of trustless fiduciary transfer. Today we live in a diverse ecosystem of blockchains, with several hundred blockchains all existing to serve different use cases. One of which is using a blockchain as a tool in solving the global identity crisis. Many of the top people in the self-sovereign identity space believe building out a new platform is the long term solution. I believe hierarchical deterministic keys may provide an immediate option for bootstrapping a blockchain identity with tools that already exist.</p>
+
+  <p>Hierarchical deterministic (HD) keys are a type of deterministic bitcoin wallet derived from a known seed, that allow for the creation of child keys from the parent key. Because the child key is generated from a known seed there is a relationship between the child and parent keys that is invisible to anyone without that seed. The HD protocol (BIP 32) can generate a near infinite number of child keys from a deterministically-generated seed (chain code) from its parent, providing the functionality of being able to recreate those exact same child keys as long as you have the seed. In the context of the using the blockchain to transfer the value of bitcoin, HD keys are predominately used to simplify wallet backups. Because the child key can operate independently and the parent key has the ability to monitor and control each child key, that parent key can still continue to operate even if the child key is compromised. If we use a blockchain token to represent a person or an identity, instead of a financial value, the root HD key facilities the creation and control of an identity that can then create subsequent child identities or personas depending on the context of the identity use case.</p>
+
+  <p>In 2014, I attended Blockchain University and presented a proof of concept around blockchain identity. The project, called blockchainMe, used a  combination of the proof-of-existence method of hashing documents on the blockchain and PGP signing of identity documents to create a Blockchain ID. BlockchainMe is a web application where users can create an identity document and sign it with their PGP key in the browser. The blockchain provided the functionality of a publicly proveable timestamp, while PGP provided the reputation network though the web of trust. The project placed in the Coinbase Bithackaton, and steamrolled my interested in solving identity problems in the blockchain space. Today, the proof of existence method I used two years ago is starting to establish legal recognition in states like Vermont. As some who cares deeply about these solutions, I would like to be apart of the on going conversations around standards as they relate to blockchain technologies. As a developer, I am currently interning at Blockstream over the summer, where I will work on some identity solutions involving HD keys.</p>
+
+  <h2>My related projects in the bitcoin space</h2>
+
+  <ul>
+    <li>BlockchainMe <a rel="nofollow" href="http://www.blockchainme.com/">www.blockchainme.com</a></li>
+    <li>Foldy Paper Wallet <a rel="nofollow" href="https://itunes.apple.com/us/app/foldy-paper-wallet/id1051481352?mt=8">https://itunes.apple.com/us/app/foldy-paper-wallet/id1051481352?mt=8</a></li> 
+  </ul>
+
+</body>
+</html>
