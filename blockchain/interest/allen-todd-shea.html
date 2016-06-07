@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blockchain Workshop Position Statement</title>
+  <style >
+    body {
+      max-width: 50em;
+      margin: auto;
+      font-family: Verdana, sans-serif;
+      font-size: 1em;
+      color: black;
+      background: white;
+    }
+
+    h1 {
+      font-size: 1.4em;
+    }
+
+    h2 {
+      font-size: 1.3em;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    h4 {
+      font-size: 1.1em;
+    }
+
+    h5, 46 {
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Smarter Signatures: Options to Ensure Fiduciary Protection on the Web</h1>
+
+  <p>by Christopher Allen, Peter Todd, and Ryan Shea</p>
+
+  <h3>Position Statement</h3>
+
+  <p>Signatures are important to web technologies because they're what map human
+  identities to public keys and their cryptographic identities. They're a
+  critical link for creating security and preserving privacy on the web.
+  However, smart signatures can do even more. Multisignatures allow several
+  people to sign together. Signature delegation supports one person signing
+  for someone else — for a short period of time, for limited situations, or
+  for more extensive usage. Generally, smart signatures can be used to map
+  not just human <i>identities</i> on the web, but also human
+  <i>relationships</i>. This is especially important in a web-based world
+  where fiduciary transactions requiring a high level of trust are regularly
+  conducted through browsers.</p>
+
+  <p>Despite their importance, signatures aren't a well-understood or
+  well-integrated part of current web technologies. Something needs to change.</p>
+
+  <p>To create smarter "fiduciary" signatures require new signature technologies
+  that meet five core criteria for fiduciary responsibility. They must be
+  <i>deterministic</I>, always returning the same results; they must be
+  <I>efficient</I>, cheaply offering their results; they must be
+  <i>bounded</I>, preventing DOS attacks; they must be <i>composable</I>,
+  supporting complexity with constrained opcodes; and they must be
+  <i>inspectable</I>, allowing for easy understanding.</p>
+
+  <p>Functional programming languages provide a sound basis for these technical
+  requirements. However, there are a number of different options within that
+  category, offering the opportunity for considerable discussion on the topic.</p>
+
+  <ol>
+    <li><i>Bitcoin Script.</i> Obviously, the constrained Bitcoin Script
+  language is already used as the basis of signatures in Bitcoin. Extending
+  the existing Bitcoin Script system provides the opportunity for complex
+  signatures of the sort needed for fiduciary smart signatures while still
+  maintaining the important constraints of the existing Script language.
+  Johnson Lau's BIP 114 demonstrates one possible way to do so.</li>
+
+    <li><i>Other Forth-like Languages.</i> If Bitcoin Script proves too
+  constrained (or too static), a fiduciary smart signature language could
+  instead be created by going back to the core foundation of Bitcoin Script:
+  Forth. Alternatively, Joy might be an interesting variant. Like Bitcoin
+  Script, Forth and Joy offer the advantages of languages built on the
+  composition of functions.</li>
+
+    <li><i>Lambda Languages.</I> Finally, a fiduciary smart script language
+  cold instead be built on a lambda calculus. Peter Todd has already been
+  exploring this option with "Dex", a Deterministic Predicate Expression
+  language.</li>
+  </ol>
+
+  <p>Though the choice of a functional back end for fiduciary smart contracts is
+  important, integration with a web front end may be just as critical. Most
+  users will be accessing web browsers and ID wallets to view fiduciary smart
+  signatures and to inspect their validity. The integration of HTTPS services
+  into the web has already shown that minor changes to how a browser displays
+  a secure (or insecure!) connection, and how it explains those results, can
+  make large differences in whether users accept those connections — and thus
+  the ultimate security of the internet. A strong smart signature system
+  <i>requires</i> excellent web UI design to offer meaningful security, which
+  offers another topic for discussion.</p>
+
+  <p>This is all just the first step toward better security for fiduciary
+  activities on the web. Further questions, such as how to link asynchronous
+  oracles and blockchain backends into the web and how to allow revocation,
+  are also crucial.</p>
+
+  <p>Though the problems may be difficult, the end result of improved security
+  on the web remains an important and worthwhile goal.</p>
+
+  <h3>About the Discussion Leader</h3>
+
+  <p>Christopher Allen is the co-author of the IETF TLS 1.0 standard for the
+  web. He has also been deeply involved with blockchain technologies in
+  recent years, including teaching at Blockchain University and working at
+  Blockstream as Principal Architect. He has hosted two design workshops on
+  Rebooting the Web of Trust; he worked with Ryan Shea on a white paper about
+  Smart Signatures for the first workshop and offered suggestion to Peter
+  Todd for an advanced reading on Smarter Signatures at the second workshop.</p>
+
+  <h3>Supporting Resources</h3>
+
+  <p>Allen, Christopher, et. al. 2015. <a rel="nofollow" href="
+  https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust/blob/master/final-documents/smart-signatures.pdf">"Smart
+  Signatures"</a>. Rebooting the Web of Trust Design Workshop.</p>
+
+  <p>Lau, Johnson. 2016. <a rel="nofollow" href="
+  https://github.com/bitcoin/bips/blob/master/bip-0114.mediawiki">"Merkelized
+  Abstract Syntax Tree"</a>. Github.</p>
+
+  <p>Todd, Peter. 2016. <a rel="nofollow" href="
+  https://github.com/WebOfTrustInfo/ID2020DesignWorkshop/blob/master/topics-and-advance-readings/DexPredicatesForSmarterSigs.md">"Dex:
+  Deterministic Predicate Expressions for Smarter Signatures"</a>. Rebooting
+  the Web of Trust II / ID2020 Design Workshop.</p>
+
+  <p>Torpey, Kyle. 2016. <a rel="nofollow" href="
+  http://coinjournal.net/new-bip-enable-better-privacy-crossblockchain-exchange-trustfree-betting-bitcoin/">"New
+  BIP Would Enable Better Privacy, CrossBlockchain Exchange, TrustFree
+  Betting, and More for Bitcoin"</a>. CoinJournal.</p>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blockchain Workshop Position Statement</title>
+  <style>
+    body {
+      max-width: 50em;
+      margin: auto;
+      font-family: Verdana, sans-serif;
+      font-size: 1em;
+      color: black;
+      background: white;
+    }
+
+    h1 {
+      font-size: 1.4em;
+    }
+
+    h2 {
+      font-size: 1.3em;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    h4 {
+      font-size: 1.1em;
+    }
+
+    h5, 46 {
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Blockchain Workshop Position Statement</h1>
+  <p><b>Author:</b> Shin’ichiro Matsuo</p>
+
+  <h2 class="bio">1. Background</h2>
+
+  <p>I am a research scientist on cryptography and cryptographic protocols for over 20 years. I designed protocols from the fundamental layer, such as authentication, key exchange and encryption, to application layer like e-cash and e-voting. I am an expert on theoretical security evaluation of cryptographic protocols and co-editor of <a rel="nofollow" href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=45151">ISO/IEC 29128 “Verification of Cryptographic Protocols”</a>. I am the founder of <a rel="nofollow" href="https://www.cellos-consortium.org">CELLOS consortium</a>, which is the international consortium on security evaluation of cryptographic protocols. This consortium publishes technical reports on protocol level vulnerabilities, conduct formal verification on standard protocol like TLS and reports the result to the IETF. </p>
+
+  <p>As for the blockchain technology, I initiate a project to construct a research testbed like NSFNET for the Internet, called <a rel="nofollow" href="http://bsafe.network">“BSafe.network”</a> by international universities, with Pindar Wong. It is neutral and by using BSafe.network, any university researchers can conduct research on blockchain technology from network layer to application layers. International joint research project can be conducted over the BSafe.network. </p>
+
+  <p>On technology standard, I work for ISO/IEC JTC1 SC27/WG2 (Cryptographic Techniques) over 12 years and I am the editor of two ISO/IEC standard on cryptographic techniques, <a rel="nofollow" href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=56913">ISO/IEC 20009-2 “Anonymous entity authentication - mechanism based on signatures using a group public key”</a> and <a rel="nofollow" href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=65422">ISO/IEC 19592-1 “Secret Sharing - General”</a>. I was the Japanese head of delegation. I contributed to NIST SHA3 competition process in defining technical requirements, security evaluation and performance evaluation. I shared the experience in this completion at the <a rel="nofollow" href="https://scalingbitcoin.org/montreal2015/presentations/Day2/1-Matsuo-Lessons_SHA3_matsuo_20150913_final.pptxhttp">Scaling Bitcoin Workshop in Montreal</a>.</p>
+
+  <h2>2. Topics I would like to lead discussion</h2>
+
+  <p>From the W3C viewpoint, we should evaluate the technical impact by introducing blockchain technology before considering on the standard. These evaluations includes security evaluation, performance evaluation, and interoperability evaluation. The main topic I would like to lead discussion is how we conduct such technical evaluation.</p>
+
+  <h3>(1) Security evaluation</h3>
+  <p>Evaluation of security and privacy of a cryptographic protocol is the general issue to any cryptographic protocol and not specific to blockchain. However, by connecting blockchain to W3C layer technology, the entire protocol becomes more complicated and the security and privacy become hard to evaluate.</p>
+  <p>In security evaluation, we should consider on the security requirements (confidentiality, integrity, authenticity, …) , target protocol (http, TLS, PKI, …) and evaluating methodology ( Model checking, theorem prover, …). These topics and PALs (Protocol Assurance Level) are described in the existing ISO/IEC 29128.  In this workshop, I would like to lead discussions on supposed security requirements, target protocols we should consider, and which level of evaluation is needed from W3C standardization point of view.</p>
+
+  <h3>(2) Performance and Interoperability evaluation</h3>
+  <p>In general, introducing new technology give impacts on the performance and interoperability. Of course, it can be estimated roughly by desktop evaluation and simulation. However, we should conduct performance and interoperability evaluation over the real-scale network. Currently, there is test networks for debug are set in Bitcoin development process, however, the network does not reflect the real-life blockchain network.</p>
+  <p>At this moment, I and Pindar Wong starts building neutral academic research testbed “BSafe.network” for research by international universities. This is same as NSFNET for the development of the Internet technology. Before the commercialization of the Internet, NSFNET acts same role on the performance and interoperability evaluation. I would like to lead  discussions on the requirements for such testbed, items to be evaluated over such test research network, and collaboration with other similar activities.</p>
+
+  <h2>3. Other topics to be discussed</h2>
+
+  <p>In the blockchain technology, key management mechanism is not clearly defined. This leads the issues on the validity of digital signatures signed by old keys. W3C had already standardized XAdES for long term digital signature, which extends the validity of signature. I would like to see how this is applicable to securing current blockchain technology, and the applicability of other W3C standards to blockchain technology.</p>
+
+
+  <h2>4. Link to supporting resources</h2>
+  <ul>
+    <li><a rel="nofollow" href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=45151">www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=45151</a></li>
+    <li><a rel="nofollow" href="https://www.cellos-consortium.org">www.cellos-consortium.org</a></li>
+    <li><a rel="nofollow" href="http://bsafe.network">bsafe.network</a></li>
+    <li><a rel="nofollow" href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=56913">www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=56913</a></li>
+    <li><a rel="nofollow" href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=65422">www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=65422</a></li>
+    <li><a rel="nofollow" href="https://scalingbitcoin.org/montreal2015/presentations/Day2/1-Matsuo-Lessons_SHA3_matsuo_20150913_final.pptx">scalingbitcoin.org/montreal2015/presentations/Day2/1-Matsuo-Lessons_SHA3_matsuo_20150913_final.pptx</a></li>
+  </ul>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style type="text/css">
+    @import url('https://themes.googleusercontent.com/fonts/css?kit=XxuUcObLyV49aVWHOHUXiSLDCcoVDx6wKmnvWpzmEYE');
+    body {
+      max-width: 40em;
+      margin-left: 5em;
+      font-family: "Average", serif;
+      font-size: 12pt;
+      color: black;
+      background: white;
+    }
+
+    h1, h2, h3, .subhead {
+      font-family: "Francois One", Impact, san-serif;
+      padding-top: 20pt;
+      padding-bottom: 6pt;
+      line-height: 1.15;
+    }
+
+
+    h2 {
+      font-size: 14pt;
+    }
+
+    .subhead {
+      font-weight: bold;
+    }
+
+    header, p img {
+      text-align: center
+    }
+
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      margin: 0;
+      padding: 0;
+      padding-left: 0.25rem;
+      border: 1px solid black;
+    }
+    
+  </style>
+
+</head>
+<body>
+
+<header>
+
+  <h1>A Web-based Ledger Data Model and Format</h1>
+
+  <p><span>by Manu Sporny and David Longley / Digital Bazaar</span></p>
+
+  <p class="subhead">A position statement by Digital Bazaar for the W3C Blockchain Workshop</p>
+</header>
+
+<h2 id="h.phzxn441gtbk"><span>Overview of Proposed Topics</span></h2><ul><li><span>A generalized, Web-based ledger (aka blockchain) data model and format</span></li><li><span>Web-based ledgers for expressing Verifiable Claims (related to identity)</span></li></ul>
+
+<h2 id="h.nb3d0uq64ybi"><span>Personnel Background</span></h2>
+
+<p><span>Manu Sporny is a co-founder and Chairman of the W3C Web Payments Community Group[WPCG] and W3C Credentials Community Group[CCG]. He is the Task Force Leader of the Verifiable Claims Task Force[VCTF], a subgroup of the officially chartered W3C Web Payments Interest Group[WPIG]. He is the </span><span>principal Investigator of Department of Homeland Security &ldquo;Credentials in Public/Private Ledgers&rdquo; (read: Blockchains) SBIR Project[LEDGER-SBIR] and the Chief Executive Officer of Digital Bazaar[BAZAAR] (a W3C Member).</span></p>
+
+<p><span></span></p>
+
+<p><span>Dave Longley is the creator of the Forge JavaScript cryptography library[FORGE] which has been used to secure 87% of world&rsquo;s online elections[ELECTIONS] and is one of the most popular JavaScript cryptography libraries in the world[JSCRYPTO]. He is lead Architect of Department of Homeland Security &ldquo;Credentials in Public/Private Ledgers&rdquo; (read: Blockchains) SBIR Project and the Chief Technology Officer of Digital Bazaar.</span></p>
+
+<h2 id="h.z6iyumwtb48"><span>A Generalized Web-Based Ledger Data Model and Format</span></h2>
+
+<p><span>Decentralized ledgers (aka blockchains) have been designed for decentralized control but not for decentralized semantics. They are highly specific to their application area and lack the flexibility required for a variety of different storage and provenance models. They possess no mechanism for extending their data model in a self-discoverable or machine-readable way. This makes tuning the existing monolithic blockchain designs to meet new use cases a challenging, if not financially and technically prohibitive, undertaking.</span></p>
+
+<p><span></span></p>
+
+<p><span>If we assume that there will be many different types of ledgers, as there are many different types of websites today, then it follows that a generalized format for expressing and accessing these ledgers is desirable and a requirement for interoperability. We currently don&rsquo;t have the equivalent of JSON or HTTP for Blockchains. Creating a generalized Web-based ledger data model, format, and protocol would commoditize the data model and format </span><span>while spurring innovation at the </span><span>application layer. </span></p>
+
+<p><span></span></p>
+
+<p><span>Such a generalized ledger data model and format could:</span></p><ul><li><span>be capable of expressing a wide variety of information directly in the blockchain to meet different use cases</span></li><li><span>be configured for a variety of different authorization and consensus scenarios</span></li><li><span>be configured to store public data and link to or be linked from private off-ledger data</span></li><li><span>be configurable at run-time via machine-readable rules that can adapt over time to meet unforeseen challenges or changes in the use of the ledger</span></li><li><span>be tuned to have good consistency characteristics, high availability characteristics, or failure tolerance characteristics</span></li></ul>
+
+<p><span></span></p>
+
+<p><span>Web technologies that could be applied to the goals above include:</span></p><ul><li><span>Identifying ledgers via URLs</span></li><li><span>Discoverability and inter-ledger linking via URLs</span></li><li><span>JSON and/or Linked Data for the data model</span></li><li><span>JSON and JSON-LD for the base data format</span></li><li><span>W3C Web Authentication and Web Crypto Working Group standards for authorization and/or authentication</span></li><li><span>Machine-readable permission semantics via the Permissions and Obligations Expression work at W3C</span></li></ul>
+
+<p><span></span></p>
+
+<p><span>There is an opportunity to start pre-standardization work on a configurable ledger data model and format based[WEB-LEDGER] on the variety of existing ledgers already deployed in the field. Our goal for the topic discussion would be to have the group explore the concept of a generalized ledger data model and format using W3C technologies.</span></p>
+
+<h2 id="h.56rf709ndb8z"><span>Web-based Ledgers for Expressing Verifiable Claims</span></h2>
+
+<p><span>A verifiable claim is a cryptographically verifiable statement made by one entity about another entity. Examples of verifiable claims include digital driver&rsquo;s licenses, proofs of age, education and healthcare credentials. There is work currently underway at the W3C to determine if verifiable claims should be standardized. One increasingly important question around verifiable claims is whether or not the storage of these claims in blockchains is a compelling thing to do. </span></p>
+
+<p><span></span></p>
+
+<p><span>We assert that expressing certain credentials on ledgers is a compelling thing to do from a cost-savings and regulatory perspective. A proposed verifiable claims ecosystem that integrates blockchain technology (via a public ledger tuned to verifiable claims)[BLOCKCHAIN-CLAIMS], and as envisioned by the W3C Credentials Community Group is shown below:</span></p>
+
+<p><span></span></p>
+
+<p><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 367.00px; height: 355.56px;"><img width="365" height="355" title="" alt="" src="data:image/png;base64,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">
+
+</span></p>
+
+<p><span></span></p>
+
+<p><span>The components of the architecture shown above are defined below: </span></p>
+
+<p><span></span></p>
+
+<p><span>Issuers</span><span>&nbsp;provide verifiable claims to people and organizations (e.g. ETS, Pearson, Walmart, Verisys, Target, NACS (retailers), New Zealand Government, Bloomberg, and IMS Global member companies). </span></p>
+
+<p><span></span></p>
+
+<p><span>Repositories</span><span>&nbsp;store and curate verifiable claims on behalf of people and organizations (e.g. Accreditrust, Verisys, Bill and Melinda Gates Foundation, and Deutsche Telekom).</span></p>
+
+<p><span></span></p>
+
+<p><span>Inspectors</span><span>&nbsp;request verifiable claims from people and organizations in order to give them access to protected resources (e.g. Walmart, Target, NACS (retailers), Bloomberg, New Zealand Government, Education Institutions (IMS Global member companies), Financial Institutions, and customers of Issuers today).</span></p>
+
+<p><span></span></p>
+
+<p><span>Holders</span><span>&nbsp;receive verifiable claims from issuers, store them at repositories that they trust, and provide them to inspectors in order to get access to protected resources (e.g. Citizens, Employees, Professionals, Aid Recipients, Legal Guardians, and Property Owners).</span></p>
+
+<p><span></span></p>
+
+<p><span>Public Ledgers</span><span>&nbsp;(aka blockchains) store public-facing verifiable claims (e.g. proof of publication, proof of existence, proof of revocation, etc.).</span></p>
+
+<p><span></span></p>
+
+<p><span>Decentralized Identifier DHT</span><span>&nbsp;stores self-sovereign identifier documents for the purpose of claiming self-sovereign identifiers, updating the basic management information associated with a self-sovereign identifier, and verifying the cryptographic authenticity of information associated with a self-sovereign identifier.</span></p>
+
+<p><span></span></p>
+
+<p><span>The following use cases would be possible given an ecosystem like the one described above:</span></p>
+
+<p><span></span></p><ul><li><span>First responders and emergency workers could be authenticated to gain access to protected sites or resources via wearable devices, even if the credential issuers had experienced complete system failure.</span></li><li><span>Professional credentials, such as Emergency Medical Technician or Hospital Employee, could be checked before allowing a responder to start a work shift.</span></li><li><span>A country&rsquo;s customs and border control could use credentials to speed traveler processing at airports while also making the documents less likely to be forged.</span></li><li><span>A country&rsquo;s customs and border control could check immigration credentials (passport, visa, etc.) by checking a public ledger instead of requiring systems to interoperate between countries, especially countries that cannot afford to keep their digital systems up and running in a highly-available configuration.</span></li><li><span>Governments could issue credentials to aid recipients and check those credentials when the individual arrives to pick up aid, even if it is in a remote part of the world.</span></li><li><span>Continuous education credentials could be issued post-training to all employees and potential career paths could be suggested based on data analysis on skillsets expressed via digital credentials.</span></li></ul>
+
+<p><span></span></p>
+
+<p><span>Our goal for the topic discussion would be to have the group explore the various different types of identity-related information that could be safely published to a public ledger without violating an individual&rsquo;s privacy. In addition to the above use cases, we would also like to explore additional compelling use cases for identity in both public and private ledgers.</span></p>
+
+<h2 id="h.mlbwred8204"><span>Other Suggested Topics</span></h2>
+
+<p><span>In addition to the topics above, we believe that the workshop would benefit from at least covering a subset of the items below:</span></p>
+
+<p><span></span></p><ul><li><span>Hyperledger and the Linux Foundation</span></li><li><span>R3 and the bank perspective</span></li><li><span>Internet of Things and Blockchain</span></li><li><span>Dynamic Marketplaces (Bid/Ask on Blockchain)</span></li><li><span>Smart Contracts</span></li><li><span>Healthcare Patient Records</span></li><li><span>Document Storage (IPFS)</span></li></ul>
+
+<h2 id="h.d6i1pkpqtmis"><span>References</span></h2>
+
+<p><span></span></p><a rel="nofollow" id="t.48d28a9ce03365245942dbc2d7edd00b504f734e"></a><a rel="nofollow" id="t.0"></a><table><tbody><tr><td colspan="1" rowspan="1">
+
+<p><span>[WPCG] </span></p></td><td colspan="1" rowspan="1">
+
+<p><span>Web Payments Community Group at W3C, &nbsp;</span><span><a rel="nofollow" href="https://www.w3.org/community/webpayments/">https://www.w3.org/community/webpayments/</a></span><span>&nbsp;</span></p></td></tr><tr><td colspan="1" rowspan="1">
+
+<p><span>[CCG] </span></p></td><td colspan="1" rowspan="1">
+
+<p><span>Credentials Community Group at W3C, </span><span><a rel="nofollow" href="https://www.w3.org/community/credentials/">https://www.w3.org/community/credentials/</a></span><span>&nbsp;</span></p></td></tr><tr><td colspan="1" rowspan="1">
+
+<p><span>[VCTF] </span></p></td><td colspan="1" rowspan="1">
+
+<p><span>Verifiable Claims Task Force - W3C Web Payments Interest Group, </span><span><a rel="nofollow" href="http://w3c.github.io/vctf/">http://w3c.github.io/vctf/</a></span><span>&nbsp; </span></p></td></tr><tr><td colspan="1" rowspan="1">
+
+<p><span>[WPIG] </span></p></td><td colspan="1" rowspan="1">
+
+<p><span>Web Payments Interest Group, </span><span><a rel="nofollow" href="https://www.w3.org/Payments/IG/">https://www.w3.org/Payments/IG/</a></span><span>&nbsp;</span></p></td></tr><tr><td colspan="1" rowspan="1">
+
+<p><span>[LEDGER-SBIR] </span></p></td><td colspan="1" rowspan="1">
+
+<p><span>Department of Homeland Security Calls for Blockchain Research, </span><span><a rel="nofollow" href="http://www.coindesk.com/department-of-homeland-security-calls-for-blockchain-research/">http://www.coindesk.com/department-of-homeland-security-calls-for-blockchain-research/</a></span><span>&nbsp;</span></p></td></tr><tr><td colspan="1" rowspan="1">
+
+<p><span>[BAZAAR] </span></p></td><td colspan="1" rowspan="1">
+
+<p><span>Digital Bazaar, </span><span><a rel="nofollow" href="http://digitalbazaar.com/">http://digitalbazaar.com/</a></span><span>&nbsp;</span></p></td></tr><tr><td colspan="1" rowspan="1">
+
+<p><span>[FORGE] </span></p></td><td colspan="1" rowspan="1">
+
+<p><span>Forge, </span><span><a rel="nofollow" href="https://github.com/digitalbazaar/forge">https://github.com/digitalbazaar/forge</a></span><span>&nbsp;</span></p></td></tr><tr><td colspan="1" rowspan="1">
+
+<p><span>[ELECTIONS] </span></p></td><td colspan="1" rowspan="1">
+
+<p><span>Scytl Online Voting, </span><span><a rel="nofollow" href="https://www.scytl.com/en/products/election-day/scytl-online-voting/">https://www.scytl.com/en/products/election-day/scytl-online-voting/</a></span><span>&nbsp;</span></p></td></tr><tr><td colspan="1" rowspan="1">
+
+<p><span>[JSCRYPTO] </span></p></td><td colspan="1" rowspan="1">
+
+<p><span>NPM and Github Forge repository statistics, </span><span><a rel="nofollow" href="https://www.npmjs.com/package/node-forge">https://www.npmjs.com/package/node-forge</a></span><span>&nbsp;</span><span><a rel="nofollow" href="https://github.com/digitalbazaar/forge/stargazers">https://github.com/digitalbazaar/forge/stargazers</a></span><span>&nbsp;</span></p></td></tr><tr><td colspan="1" rowspan="1">
+
+<p><span>[WEB-LEDGER] </span></p></td><td colspan="1" rowspan="1">
+
+<p><span>Linked Data Ledger 1.0, </span><span><a rel="nofollow" href="https://web-payments.org/specs/source/web-ledger/">https://web-payments.org/specs/source/web-ledger/</a></span><span>&nbsp;</span></p></td></tr><tr><td colspan="1" rowspan="1">
+
+<p><span>[BLOCKCHAIN-CLAIMS] </span></p></td><td colspan="1" rowspan="1">
+
+<p><span>A Self-Sovereign Identity Architecture, </span><span><a rel="nofollow" href="https://github.com/WebOfTrustInfo/ID2020DesignWorkshop/blob/master/topics-and-advance-readings/a-self-sovereign-identity-architecture.pdf">https://github.com/WebOfTrustInfo/ID2020DesignWorkshop/blob/master/topics-and-advance-readings/a-self-sovereign-identity-architecture.pdf</a></span><span>&nbsp;</span></p></td></tr></tbody></table>
+
+<p><span></span></p>
+
+<h2 id="h.n40hmggavdn2"><span>Disclaimer</span></h2>
+
+<p><span>This document references work funded, in part, by the United States Department of Homeland Security&#39;s Science and Technology Directorate. That work, and the content of this document, does not necessarily reflect the position or the policy of the U.S. Government and no official endorsement should be inferred.</span></p>
+
+<p><span></span></p><div>
+
+<p><span></span></p></div></body></html>
