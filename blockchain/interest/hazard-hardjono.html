@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CommonAccord: Towards a Foundation for Smart Contracts in Future Blockchains</title>
+  <style>
+    body {
+      max-width: 50em;
+      margin: auto;
+      font-family: Verdana, sans-serif;
+      font-size: 1em;
+      color: black;
+      background: white;
+    }
+
+    h1 {
+      font-size: 1.4em;
+    }
+
+    h2 {
+      font-size: 1.3em;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    h4 {
+      font-size: 1.1em;
+    }
+
+    h5, 46 {
+      font-size: 1em;
+    }
+
+    .bio {
+      font-size: 1.1em;
+    }
+
+    ol.lettered {
+      list-style-type: lower-alpha;
+    }
+
+    ol.refs {
+      list-style-type: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>CommonAccord: Towards a Foundation for Smart Contracts in Future Blockchains</h1>
+  <h2>W3C Position Paper</h2>
+  <p><b>Authors:</b> <br>
+  Jim Hazard (CommonAccord) <br>
+  Thomas Hardjono (MIT Connection Science &amp; Engineering)</p>
+
+  <p>9 June 2016</p>
+
+  <h2>I. Towards a Universal Smart Contracts Ecosystem</h2>
+
+  <p>The advent of the <a rel="nofollow" href="https://www.ethereum.org">Ethereum platform</a> <a href="#ref-1">[1]</a> has opened-up the horizon to the various possible uses of the Peer-to-peer (P2P) network underlying the bitcoin blockchain system. The main feature of interest in Ethereum is its ability to support “smart contracts”, namely software code that embodies a legal contract (parts or whole) that will be executed on one or more nodes of the P2P network.</p>
+
+  <p>We argue that in order for the legal community and legal professionals in general to accept and begin using smart contracts, there needs to be a progression of technological developments hand-in-hand with advances in legal thinking and practices. There also needs to be a digital ecosystem – including scalable blockchain infrastructures – that provides a safe and verifiable work flow for legal practitioners to practice law in the blockchain world.</p>
+
+  <p>One possible technical advance lies in the area of new syntaxes or language that allows the correct semantic translation from an existing contract (e.g. paper contract) to an equivalent executable smart contract.</p>
+
+  <h2>II.  Three Layers of Contracts</h2>
+
+  <p>We believe there are at least three (3) possible “levels” or categories of contract-languages that need to be realized in order to bridge the gap from paper contracts to smart contracts:</p>
+
+  <ol class="lettered">
+    <li>Human friendly digital contracts representation: At the highest level, there needs to be a human-friendly language that supports modular components of contracts based on an object model.  Such a language must also be rich enough in contextual information and metadata in order for other software tools to access (e.g. perform search and analytics). We put forward <a rel="nofollow" href="http://www.commonaccord.org">CommonAccord</a> <a href="#ref-2">[2]</a> as such a language.</li>
+
+    <li>Smart Contracts Description Language: At the middle level a platform-independent language is needed that semantically expresses the identical (equivalent) meaning and intent as captured in the higher level human-readable contract. We refer to this as the Smart Contracts Description Language (SCDL). Such a language must be “platform-independent”, meaning that is must be free for the technical constraints of the target computer or platform (i.e. nodes on the P2P network).</li>
+
+    <li>Target Platform Executable Language: At the lowest level there needs to be platform-specific languages that are closely tied to the hardware and software architecture of the executing node. We refer to this family of languages as the Target Platform Executable Language (TPEL). Here the contracts expressed in the platform-independent SCDL must first be translated into the low level platform-specific TPEL in order for the node to execute the TPEL contracts or sub-contracts. We argue that languages such as <a rel="nofollow" href="http://solidity.readthedocs.io/en/latest/">Solidity</a> <a href="#ref-3">[3]</a> (for Ethereum) and Golang for <a rel="nofollow" href="https://www.hyperledger.org">Hyperledger</a> <a href="#ref-4">[4]</a> fit into this third category of languages.</li>
+  </ol>
+
+
+  <h2>III.  CommonAccord: A Human-Friendly Digital Contracts Modular Representation</h2>
+
+  <p>CommonAccord is an object-based language that supports the creation of global template system of codified legal texts. The goal of CommonAccord’s design is to make documents so modular that much of the text disappears, leaving parties with only specific deal points and clear relationships. These relationships can be “rendered” at any time into full legal documents, for verification and enforcement. From a technical point of view, it is a “data-model for text”, an extremely simple and expandable data-model that consists of a series of nested lists that render into texts. The texts can be improved, extended and forked by the community <a href="#ref-5">[5]</a>. </p>
+
+  <p>A key aspect of the CommonAccord usage model is the deployment of GitHub-like repositories that allow for different version of a contract template to be maintained, and for anyone to download (fork) versions of a contract template and to contribute back into the repository. The vision is to make CommonAccord to lawyers (as so called “legal developers”) what GitHub is for software developers.</p>
+
+  <p>Related to this deployment model is therefore the goal of  decentralizing the writing of legal documents and empowering users by developing a massive global inventory of standard legal forms, libraries of legal clauses and specific use-cases in civil law. The many modular elements can then be mixed-and-matched by users to apply to their specific needs. Specific legal modules would be rated, annotated and commented up by recognized legal experts, in an open-source fashion, helping to provide a measure of credibility and trust in the legal draftsmanship of legal documents. While the CommonAccord system would not necessarily eliminate the need for a real lawyer in a given situation, it could automate, simplify and reduce the legal costs for many standard commercial and civil transactions. CommonAccord is also involved in devising machine-readable legal consent forms for contributors to peer production projects, such as open source software projects, data sharing by municipalities, patients who share their genetic information with hospitals and pharmaceutical companies, and musicians eager to collaborate on collective pieces of music. Such collaborations are often plagued by legal terms that favor the data-using institutions and by incompatibilities among national legal systems and <a rel="nofollow" href="http://p2pfoundation.net/Common_Accord">digital technical standards</a> <a href="#ref-5">[5]</a>.</p>
+
+
+  <h2>Authors</h2>
+
+  <h3>James Hazard</h3>
+
+  <p>James Hazard is a lawyer and the founder of CommonAccord.org.  He has practiced law in Paris and Boston, and is a member of the California, NY and Massachusetts bar associations.  He is a graduate of Cornell Law School and Brown University.</p>
+
+  <h3>Thomas Hardjono</h3>
+
+  <p>Thomas Hardjono the Director of the MIT Internet Trust Consortium, within MIT Connection Science. He has been active in identity management and identity federation for nearly two decades now, starting from the mid-1990s working in the emerging X509 PKI industry as principal scientist at VeriSign which became the largest PKI provider in the world. His work included devices certificates for DOCSIS cable modems and for Wi-Fi devices, and his achievements included standing-up the first commercial root CA service for TPM1.2 secure hardware. He was chair of the TPM Infrastructure WG in the Trusted Computing Group, which was tasked to solve the integration of TPM management within Enterprise infrastructures. His work also expanded into the area of security assertions and claims management. He was active in the SAML2.0 community in the Liberty Alliance and in OASIS. He is currently the chair of the SAML2.0 Technical Committee. Thomas has also been instrumental in supporting the development of the MIT Kerberos open source software and the development of the OpenID-Connect 1.0 protocol (OIDC) for identity federation based on the OAuth2.0 framework.  He is the technical editor of the recently published User Managed Access (UMA 1.0) architecture for user-centric consent management based on OAuth2.0. Thomas was successful in standing-up the first OpenID-Connect service at a major university (oidc.mit.edu), and in representing MIT at various industry consortiums and standards organizations. Recently he was instrumental in standing-up the first Ripple digital currency validation server at a major university (<a rel="nofollow" href="http://rippled.media.mit.edu">rippled.media.mit.edu</a>). He is currently focusing on identities and identity management for blockchain systems, and on privacy-preserving computing.</p>
+
+
+  <h2>References</h2>
+  <ul>
+    <li id="ref-1"><a href="#ref-1">[1]</a>  Ethereum Project. <a rel="nofollow" href="https://www.ethereum.org">https://www.ethereum.org</a></li>
+    <li id="ref-2"><a href="#ref-2">[2]</a>  CommonAccord. <a rel="nofollow" href="http://www.commonaccord.org">http://www.commonaccord.org</a></li>
+    <li id="ref-3"><a href="#ref-3">[3]</a>  Solidity. <a rel="nofollow" href="http://solidity.readthedocs.io/en/latest/">http://solidity.readthedocs.io/en/latest/</a></li>
+    <li id="ref-4"><a href="#ref-4">[4]</a>  Hyperledger Project. <a rel="nofollow" href="https://www.hyperledger.org">https://www.hyperledger.org</a></li>
+    <li id="ref-5"><a href="#ref-5">[5]</a>  P2P Foundation: <a rel="nofollow" href="http://p2pfoundation.net/Common_Accord">http://p2pfoundation.net/Common_Accord</a></li>
+  </ul>
+
+</body>
+</html>
