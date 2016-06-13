@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Position Paper for W3C Blockchain Workshop</title>
+  <style>
+    body {
+      max-width: 50em;
+      margin: auto;
+      font-family: Verdana, sans-serif;
+      font-size: 1em;
+      color: black;
+      background: white;
+    }
+
+    h1 {
+      font-size: 1.4em;
+    }
+
+    h2 {
+      font-size: 1.3em;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    h4 {
+      font-size: 1.1em;
+    }
+
+    h5, 46 {
+      font-size: 1em;
+    }
+
+
+    ul.refs {
+      list-style-type: none;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Blockchain Workshop Position Statement</h1>
+  <p><b>Author:</b> Ethan Buchman (Tendermint)</p>
+    
+  <p>Copied from my <a href="interest/expressions-of-interest.html#Buchman">expression of interest</a>:</p> 
+    <blockquote>I studied biophysics and self-organization, trying to understand the origin of life, when in 2013 I realized Bitcoin was a manifestation of the same sorts of principals in digital media as I was investigating in biochemical media. Since then I have operated Bitcoin ATM machines, contributed research and code to the Ethereum team, served as lead blockchain developer at Eris Industries, been an instructor at Blockchain University, and am currently CTO at Tendermint. My primary interests are in formalizing the shape and scope of consensus/blockchain protocols, and in the implications of the technology for local governance.</blockquote>
+
+  <p>I think it is critical to establish standards at two key places:</p>
+  <ul>
+    <li>verification of cryptographic commitments (ie. a general purpose crypto expression language)</li>
+    <li>a general purpose interface between consensus protocols and their application logic.</li>
+  </ul>
+
+  <p>In particular, at Tendermint, we have proposed the Tendermint Socket Protocol for the later, perhaps to be renamed the "Blockchain Gateway Interface", to emphasize the analogy to the Common Gateway Interface (CGI) used between webservers and webapps. TMSP is hosted at <a rel="nofollow" href="https://github.com/tendermint/tmsp">https://github.com/tendermint/tmsp</a> and an explanation can be found at <a rel="nofollow" href="http://tendermint.com/blog/tendermint-socket-protocol/">http://tendermint.com/blog/tendermint-socket-protocol/</a>. It enables one to run applications written in any programming language, and provides abstraction at a critical point enabling much greater modularity in blockchain software.</p>
+
+</body>
+</html>
