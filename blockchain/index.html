@@ -48,6 +48,44 @@
 
       }
 
+      ul#people-list {
+        margin: 0.75em 0;
+        padding: 0 1em;
+        list-style: none;
+      }
+
+        ul#people-list li:before { 
+          content: "";
+          background-color: gray;
+          border-color: gray;
+          border-style: solid;
+          /*border-width: 0.1em;*/
+          border-radius: 100%;
+          display: block;
+          height: 0.5px;
+          width: 0.5px;
+          left: -1em;
+          top: 0.8em;
+          position: relative;
+        }
+
+        ul#people-list li.participant:before { 
+          content: "";
+          background-color: #FFF;
+          border-color: transparent blue;
+          border-style: solid;
+          border-width: 0.35em 0 0.35em 0.45em;
+          border-radius: 0;
+          display: block;
+          height: 0;
+          width: 0;
+          left: -1em;
+          top: 0.9em;
+          position: relative;
+        }
+
+
+
 
       @page {margin: 2cm 2cm}
 
@@ -245,9 +283,10 @@
       <h2 class="footnote">Sponsors</h2>
 
       <article class="sponsors">
-        <h3 id="platinum-sidebar">Platinum Sponsor</h3>
         <p><a href="http://www.bloomberg.com/"><img alt="Bloomberg" src="Bloomberg_logo.svg" width="300" height="60"></a></p>        
         <p><a href="http://www.ntt.co.jp/index_e.html"><img alt="NTT" src="NTT_logo.svg" width="300" height="80"></a></p>
+
+        <p><a href="http://blockstream.com/"><img alt="Blockstream" src="Blockstream_logo.png" width="237" height="80"></a></p>
       </article>
 
       <p><a href="#sponsorship">Become a sponsor!</a></p>
@@ -441,109 +480,150 @@
         <li>Vlad Zamfir, Ethereum</li>
       </ul>
 
-      <h4 id="people">Position Statements and Expressions of Interest</h4>
-      <p>These are the likely attendees of the workshop, based on position statements and expressions of interest. This list will be undated daily.</p>
-      
+      <h4 id="people">Participants, Position Statements, and Expressions of Interest</h4>
+
       <p>You can read all the <a href="interest/expressions-of-interest.html">current expressions of interest</a> (<a href="https://www.w3.org/2002/09/wbs/1/blockchain-workshop/results">alternate view</a>).</p>
 
-      <ul>
+      <p>You can also read the <a href="feedback.html">Program Committee review ratings</a> for each Position Statement and Expression of Interest.</p>
+
+      <p><i>Registered attendees at the workshop are indicated with a blue triangle.</i></p>
+
+      <ul id="people-list">
         <!-- <li>“No, I seriously am Satoshi Nakamoto”, by Craig Wright</li> -->
-        <li>Patrick Adler (Federal Reserve Bank of Chicago): <a href="interest/adler.html">email</a></li>
-        <li>Gurvinder Ahluwalia (IBM): <a class="position" href="interest/ahluwalia.html">position statement</a></li>
-        <li>Tariq B. Ahmad: <a class="position" href="interest/ahmed.html">position statement</a></li>
-        <li>Christopher Allen: <a href="interest/expressions-of-interest.html#Allen">expression of interest</a></li>
+        <li class="participant">Patrick Adler (Federal Reserve Bank of Chicago): <a href="interest/adler.html">email</a></li>
+        <li class="participant">Gurvinder Ahluwalia (IBM): <a class="position" href="interest/ahluwalia.html">position statement</a></li>
+        <li class="participant">Tariq Bashir Ahmad (UMASS Amherst): <a class="position" href="interest/ahmed.html">position statement</a></li>
+        <li class="participant">Christopher Allen (Blockstream): <a href="interest/expressions-of-interest.html#Allen">expression of interest</a></li>
         <li>Christopher Allen, Peter Todd, and Ryan Shea: <a class="position" href="interest/allen-todd-shea.html">“Smarter Signatures: Options to Ensure Fiduciary Protection on the Web”</a></li>
-        <li>Juan Benet (IPFS Project): <a class="position" href="interest/benet.html">position statement</a></li>
+        <li class="participant">Chelsea Barabas (MIT)</li>
+        <li class="participant">Juan Benet (Protocol Labs, IPFS Project): <a class="position" href="interest/benet.html">position statement</a></li>
         <li>Tamara Bennett (American Express): <a href="interest/expressions-of-interest.html#Bennett">expression of interest</a></li>
-        <li>Tarique A. Bhuiyan (Hashkloud): <a class="position" href="interest/bhuiyan.pdf">position statement</a>, <a href="interest/expressions-of-interest.html#Bhuiyan">expression of interest</a></li>
-        <li>Ethan Buchman (Tendermint): <a class="position" href="interest/buchman.html">position statement</a>, <a href="interest/expressions-of-interest.html#Buchman">expression of interest</a></li>
-        <li>Daniel Buchner (Microsoft): <a class="position" href="interest/buchner.html">“Brave new world”</a></li>
-        <li>Juri Bulovic (Fidelity Investments): <a href="interest/expressions-of-interest.html#Bulovic">expression of interest</a></li>
-        <li>Eric E. Cohen: <a href="interest/expressions-of-interest.html#ECohen">expression of interest</a></li>
-        <li>Geoff Cohen (Stroz Friedberg): <a href="interest/expressions-of-interest.html#GCohen">expression of interest</a></li>
-        <li>Joshua Daniel (BT): <a class="position" href="interest/daniel-ServiceIntegration.pdf">“Blockchain based Service Composition and Integration”</a></li>
-        <li>Theo Dimitrakos (BT): <a class="position" href="interest/dimitrakos-iot.pdf">“Blockchain for IoT”</a></li>
-        <li>Haiyang DING (Huawei): <a href="interest/expressions-of-interest.html#DING">expression of interest</a></li>
-        <li>Darrell Duane (Xcelerate Solutions): <a href="interest/expressions-of-interest.html#Duane">expression of interest</a></li>
-        <li>Géry Ducatel (BT): <a class="position" href="interest/ducatel-identity.pdf">“Blockchain based Identity Management”</a></li>
-        <li>Rick Dudley (Eris Industries): <a class="position" href="interest/dudley.html">position statement</a>, <a href="interest/expressions-of-interest.html#Dudley">expression of interest</a></li>
-        <li>David Ezell (NACS: National Association for Convenience and Petroleum Retailing): <a class="position" href="interest/ezell.html">position statement</a></li>
-        <li>Gladis Filchtiner (Mobile Technology Team): <a class="position" href="interest/filchtiner.html">position statement</a></li>
+        <li class="participant">Tarique Bhuiyan (Hashkloud): <a class="position" href="interest/bhuiyan.pdf">position statement</a>, <a href="interest/expressions-of-interest.html#Bhuiyan">expression of interest</a></li>
+        <li class="participant">Alan Bird (W3C/MIT)  </li>
+        <li class="participant">Bryan Bishop (LedgerX)</li>
+        <li class="participant">David Brudnicki (Apple)</li>
+        <li class="participant">Ethan Buchman (Tendermint): <a class="position" href="interest/buchman.html">position statement</a>, <a href="interest/expressions-of-interest.html#Buchman">expression of interest</a></li>
+        <li class="participant">Daniel Buchner (Microsoft): <a class="position" href="interest/buchner.html">“Brave new world”</a></li>
+        <li class="participant">Juri Bulovic (Fidelity Investments): <a href="interest/expressions-of-interest.html#Bulovic">expression of interest</a></li>
+        <li class="participant">Michael Casey (MIT Media Lab)</li>
+        <li class="participant">Eric E. Cohen: <a href="interest/expressions-of-interest.html#ECohen">expression of interest</a></li>
+        <li class="participant">Geoff Cohen (Stroz Friedberg): <a href="interest/expressions-of-interest.html#GCohen">expression of interest</a></li>
+        <li class="participant">Joshua Daniel (BT): <a class="position" href="interest/daniel-ServiceIntegration.pdf">“Blockchain based Service Composition and Integration”</a></li>
+        <li class="participant">Theo Dimitrakos (BT): <a class="position" href="interest/dimitrakos-iot.pdf">“Blockchain for IoT”</a></li>
+        <li class="participant">Haiyang DING (Huawei): <a href="interest/expressions-of-interest.html#DING">expression of interest</a></li>
+        <li class="participant">Tomasz Drwięga (Ethcore)</li>
+        <li class="participant">Thaddeus Dryja (Lightning Labs)</li>
+        <li class="participant">Darrell Duane (Xcelerate Solutions): <a href="interest/expressions-of-interest.html#Duane">expression of interest</a></li>
+        <li class="participant">Géry Ducatel (BT): <a class="position" href="interest/ducatel-identity.pdf">“Blockchain based Identity Management”</a></li>
+        <li class="participant">Rick Dudley (Eris Industries): <a class="position" href="interest/dudley.html">position statement</a>, <a href="interest/expressions-of-interest.html#Dudley">expression of interest</a></li>
+        <li class="participant">Dan Elitzer (IDEO coLAB)</li>
+        <li class="participant">David Ezell (<abbr title="National Association for Convenience and Petroleum Retailing">NACS</abbr>): <a class="position" href="interest/ezell.html">position statement</a></li>
+        <li class="participant">Gladis Filchtiner (Mobile Technology Team): <a class="position" href="interest/filchtiner.html">position statement</a></li>
         <li>Tyson Goings (Discover Financial Services): <a href="interest/expressions-of-interest.html#Goings">expression of interest</a></li>
-        <li>Shigeru Fujimura, Hiroki Watanabe, Atsushi Nakadaira (NTT Corporation): <a class="position" href="interest/fujimura-watanabe-nakadaira-NTT.pdf">position statement</a></li>
+        <li class="participant">Shigeru Fujimura, Hiroki Watanabe, Atsushi Nakadaira (NTT Corporation): <a class="position" href="interest/fujimura-watanabe-nakadaira-NTT.pdf">position statement</a></li>
+        <li class="participant">Yuki Fukuda (Rakuten)</li>
         <li>Nitin Gaur (IBM Blockchain Labs): <a class="position" href="interest/gaur.html">position statement</a></li>
-        <li>Jon Geater (Thales e-Security): <a href="interest/expressions-of-interest.html#Geater">expression of interest</a></li>
+        <li class="participant">Jon Geater (Thales e-Security): <a href="interest/expressions-of-interest.html#Geater">expression of interest</a></li>
         <li>Jon Geater, Marta Piekarska: <a class="position" href="interest/geater-piekarska.html">position statement</a></li>
-        <li>Gilles Gravier (Wipro): <a href="interest/expressions-of-interest.html#Gravier">expression of interest</a></li>
-        <li>Adrian Gropper (HealthURL): <a class="position" href="interest/gropper.html">position statement</a></li>
+        <li class="participant">Laszlo Gombos (Samsung)</li>
+        <li class="participant">Gilles Gravier (Wipro): <a href="interest/expressions-of-interest.html#Gravier">expression of interest</a></li>
+        <li class="participant">Dazza Greenwood (MIT Media Lab, CIVICS.com)</li>
+        <li class="participant">Adrian Gropper (HealthURL): <a class="position" href="interest/gropper.html">position statement</a></li>
+        <li class="participant">Amy Guy (University of Edinburgh School of Informatics, EDINA)</li>
         <li>Harry Halpin (W3C/MIT): <a href="interest/expressions-of-interest.html#Halpin">expression of interest</a></li>
+        <li class="participant">Thomas Hardjono (MIT)</li>
+        <li class="participant">Sandy Pentland (MIT)</li>
         <li>Thomas Hardjono, Prof. Sandy Pentland (MIT Connection Science &amp; Engineering): <a class="position" href="interest/hardjono-pentland.html">“On Privacy-Preserving Identity within Future Blockchain Systems”</a></li>
-        <li>Jonathan Harvey-Buschel (MIT): <a href="interest/expressions-of-interest.html#Harvey-Buschel">expression of interest</a></li>
-        <li>Samer Hassan (Berkman Center for Internet &amp; Society, Harvard University; Universidad Complutense de Madrid): <a class="position" href="interest/samer.html">position statement</a></li>
-        <li>Kazuyoshi Hayase (Rakuten): <a class="position" href="interest/hayase.html">position statement</a></li>
+        <li class="participant">Jonathan Harvey-Buschel (MIT): <a href="interest/expressions-of-interest.html#Harvey-Buschel">expression of interest</a></li>
+        <li class="participant">Samer Hassan (Berkman Center for Internet &amp; Society, Harvard University; Universidad Complutense de Madrid): <a class="position" href="interest/samer.html">position statement</a></li>
+        <li class="participant">Sandro Hawke (W3C/MIT)</li>
+        <li class="participant">Kazuyoshi Hayase (Rakuten): <a class="position" href="interest/hayase.html">position statement</a></li>
+        <li class="participant">Jim Hazard (CommonAccord)</li>
         <li>Jim Hazard (CommonAccord), Thomas Hardjono (MIT Connection Science &amp; Engineering): <a class="position" href="interest/hazard-hardjono.html">“CommonAccord: Towards a Foundation for Smart Contracts in Future Blockchains”</a></li>
         <li>Benedikt Herudek: <a class="position" href="interest/herudek.html">“Decentralized Intelligent Organizations for Blockchain Interchange Formats”</a></li>
-        <li>Frederick Hirsch (W3C Invited Experts): <a href="interest/expressions-of-interest.html#Hirsch">expression of interest</a></li>
-        <li>Adrian Hope-Bailie (Ripple): <a href="interest/expressions-of-interest.html#Hope-Bailie">expression of interest</a></li>
-        <li>Lauri Ilola (Nokia Corporation): <a href="interest/expressions-of-interest.html#Ilola">expression of interest</a></li>
-        <li>Harry Kalodner (Princeton): <a class="position" href="interest/kalodner.html">position statement</a></li>
+        <li class="participant">Frederick Hirsch (consultant): <a href="interest/expressions-of-interest.html#Hirsch">expression of interest</a></li>
+        <li class="participant">Adrian Hope-Bailie (Ripple): <a href="interest/expressions-of-interest.html#Hope-Bailie">expression of interest</a></li>
+        <li class="participant">Lauri Ilola (Nokia): <a href="interest/expressions-of-interest.html#Ilola">expression of interest</a></li>
+        <li class="participant">Jeff Jaffe (W3C/MIT)</li>
+        <li class="participant">Johnson Lee (Federal Reserve Bank of San Francisco)</li>
+        <li class="participant">Harry Kalodner (Princeton): <a class="position" href="interest/kalodner.html">position statement</a></li>
         <li>Shammari Khan (Labyrinthus LLC): <a href="interest/expressions-of-interest.html#Khan">expression of interest</a></li>
-        <li>Shilpi Kumar (Filament): <a href="interest/expressions-of-interest.html#Kumar">expression of interest</a></li>
-        <li>Jae Kwon: <a href="interest/expressions-of-interest.html#Kwon">expression of interest</a></li>
+        <li class="participant">Won-Beom Kim 김원범 (Blocko): <a href="interest/expressions-of-interest.html#Kim">expression of interest</a></li>
+        <li>Won-Beom Kim 김원범, dallai, bankie (Blocko): <a class="position" href="interest/blocko.html">“Blockchain Key Management”</a></li>    
+        <li class="participant">Shilpi Kumar (Filament): <a href="interest/expressions-of-interest.html#Kumar">expression of interest</a></li>
+        <li class="participant">Jae Kwon (Tendermint): <a href="interest/expressions-of-interest.html#Kwon">expression of interest</a></li>
+        <li class="participant">Mahesh Kulkarni (Samsung)</li>
         <li>Martin Kurze (T-Labs, Deutsche Telekom): <a class="position" href="interest/kurze.html">“Blockchain Technology and the Web in Symbiosis with the Telco Industry”</a>, <a href="interest/expressions-of-interest.html#Kurze">expression of interest</a></li>
-        <li>Mountie Lee (PayGate): <a class="position" href="interest/lee.html">position statement</a>, <a href="interest/expressions-of-interest.html#MLee">expression of interest</a></li>
-        <li>Youngwhan Lee: <a href="interest/expressions-of-interest.html#YLee">expression of interest</a></li>
-        <li>Arnaud Le Hors (IBM Corporation): <a href="interest/expressions-of-interest.html#Le-Hors">expression of interest</a></li>        
+        <li class="participant">Mountie Lee (PayGate): <a class="position" href="interest/lee.html">position statement</a>, <a href="interest/expressions-of-interest.html#MLee">expression of interest</a></li>
+        <li class="participant">Youngwhan Lee (Konkuk University): <a href="interest/expressions-of-interest.html#YLee">expression of interest</a></li>
+        <li class="participant">Arnaud Le Hors (IBM): <a href="interest/expressions-of-interest.html#Le-Hors">expression of interest</a></li>        
+        <li class="participant">Victoria Lemieux (University of British Columbia): <a href="interest/expressions-of-interest.html#Lemieux">expression of interest</a></li>
         <li>Dr. Victoria Lemieux, Dr. Hrvoje Stancic, FINA, Teched Consulting Services Ltd., Enigio Time AB, Dr. Natasha Khramtsovsky (InterPARES Trust TRUSTER research group): <a class="position" href="interest/lemieux.html">position statement</a></li>
-        <li>Victoria Lemieux (University of British Columbia): <a href="interest/expressions-of-interest.html#Lemieux">expression of interest</a></li>
-        <li>Kerri Lemoie (BadgeChain): <a class="position" href="interest/lemoie.html">“The Opportunity Space for Open Badges + Blockchain”</a></li>
+        <li class="participant">Kerri Lemoie (BadgeChain): <a class="position" href="interest/lemoie.html">“The Opportunity Space for Open Badges + Blockchain”</a></li>
+        <li class="participant">Sita Magnuson (Dpict )</li>
         <li>Vinay Mantha (Accenture): <a href="interest/expressions-of-interest.html#Mantha">expression of interest</a></li>
-        <li>Shin’ichiro Matsuo (BSafe.network and CELLOS consortium): <a class="position" href="interest/matsuo.html">position statement</a></li>
-        <li>Trent McConaghy (Ascribe / BigchainDB): <a class="position" href="interest/mcconaghy.html">“Attribution, Licensing and Archival of the Cultural Commons”</a></li>
-        <li>Jonathan Mohan: <a class="position" href="interest/mohan.html">position statement</a></li>
+        <li class="participant">Shin’ichiro Matsuo (BSafe.network and CELLOS consortium): <a class="position" href="interest/matsuo.html">position statement</a></li>
+        <li class="participant">Trent McConaghy (Ascribe / BigchainDB): <a class="position" href="interest/mcconaghy.html">“Attribution, Licensing and Archival of the Cultural Commons”</a></li>
+        <li class="participant">Greg Misiorek (bis)</li>
+        <li class="participant">Jonathan Mohan (BitcoinNYC): <a class="position" href="interest/mohan.html">position statement</a></li>
         <li>Hélène Muddiman: <a href="interest/expressions-of-interest.html#Muddiman">expression of interest</a></li>
         <li>Alex Munoz Mendieta (Bloomberg): <a href="interest/expressions-of-interest.html#Munoz-Mendieta">expression of interest</a></li>
-        <li>Anthony Nadalin (Microsoft): <a class="position" href="interest/nadalin.html">position statement</a></li>
-        <li>Sanjeev Vittal Narsipur (Accenture): <a href="interest/expressions-of-interest.html#Narsipur">expression of interest</a></li>
-        <li>Denis Nazarov (Mediachain): <a class="position" href="interest/nazarov.html">position statement</a>, <a href="interest/expressions-of-interest.html#Nazarov">expression of interest</a></li>
-        <li>Justin Newton (Netki Inc.): <a href="interest/expressions-of-interest.html#Newton">expression of interest</a></li>
-        <li>Mikko Ohtamaa (Wattcoin): <a href="interest/expressions-of-interest.html#Ohtamaa">expression of interest</a></li>
-        <li>Joseph Poon (Lightning): <a href="interest/expressions-of-interest.html#Poon">expression of interest</a></li>
-        <li>Marta Piekarska (Blockstream): <a href="interest/expressions-of-interest.html#Piekarska">expression of interest</a></li>
-        <li>Seana Pitt (American Express): <a href="interest/expressions-of-interest.html#Pitt">expression of interest</a></li>
-        <li>Stephanie Potter (State Street Bank): <a href="interest/expressions-of-interest.html#Potter">expression of interest</a></li>
-        <li>Eileen Quenin (The Walt Disney Company): <a class="position" href="interest/quenin.html">“HTML Blockchain Event Types”</a>, <a href="interest/expressions-of-interest.html#Quenin">expression of interest</a></li>
-        <li>Kiara Robles (Blockstream): <a class="position" href="interest/robles.html">“Hierarchical Deterministic Keys”</a></li>
-        <li>Kenji Saito (Keio University, BlockchainHub Inc): <a class="position" href="interest/saito.html">position statement</a></li>
-        <li>Peter Salvitti (Boston College): <a href="interest/expressions-of-interest.html#Salvitti">expression of interest</a></li>
-        <li>David Samyde (Verifone): <a href="interest/expressions-of-interest.html#Samyde">expression of interest</a></li>
-        <li>Boaz Sender (Bocoup): <a href="interest/expressions-of-interest.html#Sender">expression of interest</a></li>
-        <li>Ryan Shea (Blockstack Labs): <a class="position" href="interest/shea.html">position statement</a></li>
+        <li class="participant">Anthony Nadalin (Microsoft): <a class="position" href="interest/nadalin.html">position statement</a></li>
+        <li class="participant">Arvind Narayanan (Princeton)</li>
+        <li class="participant">Sanjeev Vittal Narsipur (Accenture): <a href="interest/expressions-of-interest.html#Narsipur">expression of interest</a></li>
+        <li class="participant">Neha Narula (MIT Digital Currency Initiative) <narula@csail.mit.edu></li>
+        <li class="participant">Denis Nazarov (Mediachain Labs): <a class="position" href="interest/nazarov.html">position statement</a>, <a href="interest/expressions-of-interest.html#Nazarov">expression of interest</a></li>
+        <li class="participant">Justin Newton (Netki): <a href="interest/expressions-of-interest.html#Newton">expression of interest</a></li>
+        <li class="participant">Mikko Ohtamaa (Wattcoin): <a href="interest/expressions-of-interest.html#Ohtamaa">expression of interest</a></li>
+        <li class="participant">Joseph Poon (Lightning): <a href="interest/expressions-of-interest.html#Poon">expression of interest</a></li>
+        <li class="participant">Marta Piekarska (Blockstream): <a href="interest/expressions-of-interest.html#Piekarska">expression of interest</a></li>
+        <li class="participant">Seana Pitt (American Express): <a href="interest/expressions-of-interest.html#Pitt">expression of interest</a></li>
+        <li class="participant">Stephanie Potter (State Street Bank): <a href="interest/expressions-of-interest.html#Potter">expression of interest</a></li>
+        <li class="participant">Debashis Pramanik (Accenture)</li>
+        <li class="participant">Eileen Quenin (Walt Disney): <a class="position" href="interest/quenin.html">“HTML Blockchain Event Types”</a>, <a href="interest/expressions-of-interest.html#Quenin">expression of interest</a></li>
+        <li class="participant">Bailey Reutzel (independent financial journalist)</li>
+        <li class="participant">Yorke Rhodes (Microsoft)</li>
+        <li class="participant">Kiara Robles (Blockstream): <a class="position" href="interest/robles.html">“Hierarchical Deterministic Keys”</a></li>
+        <li class="participant">Kenji Saito(Keio University, BlockchainHub): <a class="position" href="interest/saito.html">position statement</a></li>
+        <li class="participant">Peter Salvitti (Boston College): <a href="interest/expressions-of-interest.html#Salvitti">expression of interest</a></li>
+        <li class="participant">Doug Schepers (W3C)</li>
+        <li class="participant">Philipp Schmidt (MIT Media Lab)</li>
+        <li class="participant">Wendy Seltzer (W3C/MIT)</li>    <li>David Samyde (Verifone): <a href="interest/expressions-of-interest.html#Samyde">expression of interest</a></li>
+        <li class="participant">Boaz Sender (Bocoup): <a href="interest/expressions-of-interest.html#Sender">expression of interest</a></li>
+        <li class="participant">Shea Ryan (Blockstack Labs): <a class="position" href="interest/shea.html">position statement</a></li>
+        <li class="participant">Christopher Sharp (Apple)</li>
+        <li class="participant">Scarlett Sieber (BBVA)</li>
         <li>Greg Slepak (okTurtles Foundation): <a class="position" href="interest/slepak-accessing-blockchains-securely.html">“Accessing Blockchains Securely”</a></li>
-        <li>Julian Smith (Blockfreight): <a href="interest/expressions-of-interest.html#Smith">expression of interest</a></li>
+        <li class="participant">Julian Smith (Blockfreight): <a href="interest/expressions-of-interest.html#Smith">expression of interest</a></li>
+        <li class="participant">Manu Sporny (Digital Bazaar): <a href="interest/expressions-of-interest.html#Sporny">expression of interest</a></li>
         <li>Manu Sporny and David Longley (Digital Bazaar): <a class="position" href="interest/sporny-longley.html">“A Web-based Ledger Data Model and Format”</a></li>
-        <li>Manu Sporny (Digital Bazaar): <a href="interest/expressions-of-interest.html#Sporny">expression of interest</a></li>
+        <li class="participant">Jutta Steiner (Ethcore)</li>
         <li>Dr. Stefan Teis (Deutsche Börse AG, Group Business &amp; Product Development): <a class="position" href="interest/teis.html">“Hyperledger Project”</a></li>
-        <li>Bart Suichies (Philips): <a href="interest/expressions-of-interest.html#Suichies">expression of interest</a></li>
+        <li class="participant">Bart Suichies (Philips): <a href="interest/expressions-of-interest.html#Suichies">expression of interest</a></li>
         <li>Alin Tomescu (MIT): <a href="interest/expressions-of-interest.html#Tomescu">expression of interest</a></li>
-        <li>Allan Third (The Open University): <a href="interest/expressions-of-interest.html#Third">expression of interest</a></li>
+        <li class="participant">Allan Third (The Open University): <a href="interest/expressions-of-interest.html#Third">expression of interest</a></li>
         <li>Allan Third, John Domingue, Michelle Bachler, Kevin Quick (Knowledge Media Institute, Open University): <a class="position" href="interest/third.html">position statement</a></li>
-        <li>Chris Tse (Monegraph): <a class="position" href="interest/tse.html">position statement</a></li>
+        <li class="participant">Peter Todd (Independent Consultant)</li>
+        <li class="participant">Alin Tomescu (MIT)</li>
+        <li class="participant">Chris Tse (Monegraph): <a class="position" href="interest/tse.html">position statement</a></li>
         <li>Alex Van de Sande (Ethereum Foundation): <a href="interest/expressions-of-interest.html#Van-de-Sande">expression of interest</a></li>
-        <li>Ravi Variar (Accenture): <a href="interest/expressions-of-interest.html#Variar">expression of interest</a></li>
-        <li>David Vorick (Nebulous): <a class="position" href="interest/vorick.html">position statement</a></li>
-        <li>Angela Walch (St. Mary’s University School of Law): <a class="position" href="interest/walch.html">position statement</a></li>
+        <li class="participant">Gina Vargas (MIT Media Lab)</li>
+        <li class="participant">Ravi Variar (Accenture): <a href="interest/expressions-of-interest.html#Variar">expression of interest</a></li>
+        <li class="participant">David Vorick (Nebulous): <a class="position" href="interest/vorick.html">position statement</a></li>
+        <li class="participant">Angela Walch (St. Mary’s University School of Law): <a class="position" href="interest/walch.html">position statement</a></li>
         <li>Mike Warner (Federal Reserve Bank of San Francisco): <a href="interest/expressions-of-interest.html#Warner">expression of interest</a></li>
+        <li class="participant">Alex Waters</li>
+        <li class="participant">Hiroki Watanabe (NTT)</li>
+        <li class="participant">Samuel Weiler (W3C/MIT)</li>
         <li>Dr. Gavin Wood, Ethcore authors (Ethcore): <a class="position" href="interest/wood.html">position statement</a></li> <li>Alex Waters: <a href="interest/expressions-of-interest.html#Waters">expression of interest</a></li>
-        <li>Won-Beom Kim (Blocko Inc): <a href="interest/expressions-of-interest.html#Kim">expression of interest</a></li>
-        <li>Won-Beom Kim 김원범, dallai, bankie (Blocko): <a class="position" href="interest/blocko.html">“Blockchain Key Management”</a></li>
-        <li>Dominic Wörner (ETH Zurich): <a class="position" href="interest/woerner.html">“Better a device on a chain than one on strings”</a></li>
-        <li>Alan Wunsche (Leading Knowledge Ltd.): <a href="interest/expressions-of-interest.html#Wunsche">expression of interest</a></li>        
+        <li class="participant">Dominic Wörner (ETH Zurich): <a class="position" href="interest/woerner.html">“Better a device on a chain than one on strings”</a></li>
+        <li>Alan Wunsche (Leading Knowledge Ltd.): <a href="interest/expressions-of-interest.html#Wunsche">expression of interest</a></li>   
+        <li class="participant">Vlad Zamfir (Ethereum)</li>     
       </ul>
-
     </section>
+
     <section>
-      <h3 id="schedule">Tentative Schedule</h3>
+      <h3 id="schedule">Schedule</h3>
       <p>The workshop will focus around several topics identified by the expressions of interest. Each topic will be introduced by one or more related lightning talks, and will be explored more in-depth by discussion breakouts, conlcuded with joint summaries of the breakouts. The goal of the discussion is not be to resolve the technical issues of the topic, but to determine its relevance and priority to standardization.</p>
 
       <p><b>This schedule may change based on discussions with the program commitee.</b></p>
@@ -551,75 +631,68 @@
       <table class="schedule">
         <tbody>
           <tr>
-            <th> 8:00–8:30 </th>
-            <td> Registration </td>
+            <th>08:00–08:30</th>
+            <td>Registration</td>
           </tr>
           <tr>
-            <th> 8:30–9:00 </th>
-            <td> <em>“Opening remarks &amp; intro to standards.”</em> Doug
-              Schepers and Wendy Seltzer, W3C.<!-- (<a href="slides/annotation-workshop.pdf">Slides</a>,
-              <a href="https://www.youtube.com/watch?v=5BT0ExAdxjI&amp;index=2&amp;list=PLmuJEyeapl2dkAVxc8pJhxbWFfChS5OHT">Video</a>) --></td>
+            <th>08:30–09:00</th>
+            <td>Opening remarks by Doug Schepers</td>
           </tr>
           <tr>
-            <th> 9:00–9:25 </th>
-            <td> <strong>Keynote: <a href="#narayanan">Arvind Narayanan</a>, “Blockchains, decentralization, and standards”</strong>
-            </td>
+            <th>08:45–09:00</th>
+            <td>Keynote: “Intro to W3C standards” Wendy Seltzer, W3C.</td>
           </tr>
           <tr>
-            <th> 9:25–10:00 </th>
-            <td> <strong>Lightning Talks</strong>
-            </td>
+            <th>09:00–10:00</th>
+            <td>Intro Exercise: Collaboration Stories (3 phases: small breakout, merged breakout, report out “Secret Sauce”)</td>
           </tr>
           <tr>
-            <th> 10:00–10:30 </th>
-            <td> Break </td>
+            <th>09:45–10:00</th>
+            <td>Break</td>
           </tr>
           <tr>
-            <th> 10:30–11:30 </th>
-            <td> <strong>Topic Breakout</strong>
-            </td>
+            <th>10:00–10:30</th>
+            <td><strong>Keynote: <a href="#narayanan">Arvind Narayanan</a>, “Blockchains, decentralization, and standards”</strong></td>
           </tr>
           <tr>
-            <th> 11:30–12:00 </th>
-            <td> <strong>Breakout Summaries</strong>
-            </td>
+            <th>10:30–11:00</th>
+            <td>Lightning Talks on <b>Identity</b>, including reputation, personal data, <abbr title="Know Your Customer">KYC</abbr> (4–5 talks)</td>
           </tr>
           <tr>
-            <th> 12:30–13:30 </th>
-            <td style="height: 26.8833px;"> Break, Lunch; Birds of a Feather
-              topic tables </td>
+            <th>11:00–12:15</th>
+            <td>Exercise: <b>Identity</b> (3 phases: breakout, report out, group discussion)</td>
           </tr>
           <tr>
-            <th> 13:00–13:45 </th>
-            <td> <strong>Topic Planning</strong>
-            </td>
+            <th>12:15–13:30</th>
+            <td><b>Lunch</b>, Birds of a Feather Topic tables</td>
           </tr>
           <tr>
-            <th> 13:45–14:30 </th>
-            <td> <strong>Topic Breakout</strong>
-            </td>
+            <th>13:30–14:00</th>
+            <td>Lightning Talks on <b>Provenance</b>, including licensing of <abbr title="Intellectual Property">IP</abbr>, assets, and services (4–5 talks)</td>
           </tr>
           <tr>
-            <th> 14:30–15:00 </th>
-            <td> <strong>Breakout Summaries</strong>
-            </td>
+            <th>14:00–15:00</th>
+            <td>Exercise: <b>Provenance</b> (3 phases: breakout, report out, group discussion)</td>
           </tr>
           <tr>
-            <th> 15:00–15:30 </th>
-            <td> Break </td>
-            </td>
+            <th>15:00–15:30</th>
+            <td>Break (includes self-organizing evening plans)</td>
           </tr>
           <tr>
-            <th> 15:30–17:00 </th>
-            <td> Panel </td>
+            <th>15:30–16:00</th>
+            <td>Lightning Talks on <b>Blockchain Primitives &amp; APIs</b>, including client-side browser features, wallets, consensus protocols, and common data formats (4–5 talks)</td>
           </tr>
           <tr>
-            <th> 17:00–17:30 </th>
-            <td> Closing statements</td>
+            <th>16:00–17:00</th>
+            <td>Exercise: <b>Blockchain Primitives &amp; APIs</b> (3 phases: breakout, report out, group discussion)</td>
           </tr>
           <tr>
-            <th> 18:30–21:00 </th>
-            <td> Evening event?</td>
+            <th>17:00–17:15</th>
+            <td>Closing statements</td>
+          </tr>
+          <tr>
+            <th>18:30–24:00</th>
+            <td>Self-organized evening plans</td>
           </tr>
         </tbody>
       </table>
@@ -627,47 +700,52 @@
       <table class="schedule">
         <tbody>
           <tr>
-            <th> 8:00–8:30 </th>
-            <td> Registration </td>
+            <th>08:00–08:30</th>
+            <td>Registration</td>
           </tr>
           <tr>
-            <th> 8:30–9:00 </th>
-            <td>Keynote TBD</td>
+            <th>08:30–09:30</th>
+            <td>Recap (Doug, Wendy, &amp; Graphic Facilitators)</td>
           </tr>
           <tr>
-            <th> 9:00–11:00 </th>
-            <td> <strong>Panel</strong>
-            </td>
+            <th>09:30–10:30</th>
+            <td>Exercise: Passions &amp;e Commitments (Take a Panel + 2 rounds)</td>
           </tr>
           <tr>
-            <th> 11:00–11:30 </th>
-            <td> Break </td>
+            <th>10:30–11:00</th>
+            <td>Lightning Talks on <b>The Kitchen Sink</b>, including all other topics</td>
           </tr>
           <tr>
-            <th> 11:30–12:30 </th>
-            <td> <strong>Summary and Goals Discussion</strong>
-            </td>
-          </tr>
-
-          <tr>
-            <th> 12:30–13:30 </th>
-            <td style="height: 26.8833px;"> Break, Lunch; Birds of a Feather
-              topic tables </td>
+            <th>10:30–12:15</th>
+            <td>Exercise: The Kitchen Sink (3 phases: breakout, report out, group discussion)</td>
           </tr>
           <tr>
-            <th> 13:00–14:30 </th>
-            <td> <strong>Demos</strong>
-            </td>
+            <th>12:15–13:30</th>
+            <td><b>Lunch</b>, Birds of a Feather Topic tables; Demo tables</td>
           </tr>
           <tr>
-            <th> 14:30–15:00 </th>
-            <td> <strong>Event Summary</strong>
-            </td>
+            <th>13:30–13:45</th>
+            <td>Personal Exercise: “Propose what would you like to see W3C or this community work on together”</td>
           </tr>
           <tr>
-            <th> 15:00–15:30 </th>
-            <td> Closing Remarks </td>
-            </td>
+            <th>13:45–15:15</th>
+            <td>Exercise: Dot Voting on proposals</td>
+          </tr>
+          <tr>
+            <th>15:15–15:45</th>
+            <td>Facilitated Discussion: Emerging Priorities for W3C &amp; Community</td>
+          </tr>
+          <tr>
+            <th>14:45–15:00</th>
+            <td>Break</td>
+          </tr>
+          <tr>
+            <th>15:15–15:30</th>
+            <td>Close: Recap by Bailey Reutzel, Actions Items, &amp; Commitments</td>
+          </tr>
+          <tr>
+            <th>15:30–17:30</th>
+            <td>Demos and Open Discussion</td>
           </tr>
         </tbody>
       </table>
@@ -684,9 +762,9 @@
       <h3 id="sponsors">Sponsors</h3>
 
       <article>
-        <h4 id="platinum">Platinum Sponsor</h4>
         <p><a href="http://www.bloomberg.com/"><img alt="Bloomberg" src="Bloomberg_logo.svg" width="450" height="90"></a></p>
         <p><a href="http://www.ntt.co.jp/index_e.html"><img alt="NTT" src="NTT_logo.svg" width="450" height="120"></a></p>
+        <p><a href="http://blockstream.com/"><img alt="Blockstream" src="Blockstream_logo.png" width="356" height="120"></a></p>
       </article>
 
 
