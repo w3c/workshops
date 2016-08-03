@@ -328,19 +328,19 @@
 
     <section>      
       <h2 id="collaboration">Exercise: Collaboration</h2>
-      <p><a href="graphics/02_Collaboration.jpg"><img alt="" src="graphics/02_Collaboration_web.jpg" width="1000" height="691"></a></p>
+      <object data="graphics/02_Collaboration.svg" width="1000" height="691"> </object> 
       <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
     </section>
 
     <section>      
       <h2 id="narayanan">Keynote: Arvind Narayanan</h2>
-      <p><a href="graphics/03_Narayanan.jpg"><img alt="" src="graphics/03_Narayanan_web.jpg" width="1000" height="669"></a></p>
+      <object data="graphics/03_Narayanan.svg" width="1000" height="669"> </object> 
       <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
     </section>
 
     <section>      
       <h2 id="identity">Topic Session: Identity</h2>
-      <p><a href="graphics/04_Identity.jpg"><img alt="" src="graphics/04_Identity_web.jpg" width="1000" height="442"></a></p>
+      <object data="graphics/04_Identity.svg" width="1000" height="442"> </object> 
       <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
     </section>
 
@@ -353,12 +353,132 @@
     <section>      
       <h2 id="primitives-sink">Topic Session: Blockchain Primitives and the Kitchen Sink</h2>
       <p><a href="graphics/06_Primitives_Sink.jpg"><img alt="" src="graphics/06_Primitives_Sink_web.jpg" width="1000" height="463"></a></p>
+      <p>Arnaud Le Hors, IBM's representative on the Hyperledger project, cautioned that bacause the blockchain landscape is still under rapid development, any related Web standards should be at the component level and should keep pace with implementations.</p>
       <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
     </section>
 
     <section>      
       <h2 id="commitments">Commitments</h2>
       <p><a href="graphics/07_Commitments.jpg"><img alt="" src="graphics/07_Commitments_web.jpg" width="690" height="840"></a></p>
+      <p>The final session had three phases:</p>
+      <ol>
+        <li><b>Proposals:</b> participants wrote concrete ideas for future work on large sticky-pads, which were attached to the wall.</li>
+        <li><b>Voting:</b> each participant was given 3 stickers: pink for “committed to work on it”; green for ”want to see this done”; and yellow for “serious warning”. Each participant then voted among all of the proposals with only these 3 stickers, forcing them to prioritize.</li>
+        <li><b>Evaluation:</b> the facilitators (Christopher Allen and Sita Magnusson) held a public discussion of each proposal, merging and summarizing proposals where appropriate, discerning which proposals had the most support, and moving each proposal into one of three categories: <i>W3C Specification</i>, <i>Needs further discussion</i>, or <i>Elsewhere</i>.</li>
+      </ol>
+      <h3>W3C Specification</h3>
+      <p>These are technologies that seem to be mature enough to develop as a technical specification and begin incubation in a W3C Community Group, for possible adoption on the W3C Recommendation (standards) track.</p>
+
+      <h3>Needs Further Discussion</h3>
+      <p>These were promising ideas that need further conversation to see if they can be developed into a specification, including identifying related or competing work and finding points of integration.</p>
+
+      <h3>Elsewhere</h3>
+      <p>These were ideas that might be mature enough for a specification, but likely don't fit into W3C's areas of expertise, but might fit at other standards organizations like IETF.</p>
+
+
+      <p>Note that there were many other topics discussed at the workshop, and this session focused only on those topics that participants proposed as possible standards.</p>
+
+<pre>
+
+Commitments
+
+W3C Community (Discussions)
+
+Digital Assets
+Kenji Saito (Keio University, BlockchainHub Inc) 
+Tarique A. Bhuiyan (Hashkloud)
+
+
+Key Management Outside the Browser
+Won-Beom Kim 김원범 (Blocko Inc)
+* Identify existing standards
+* Discuss use cases
+
+Smart Signatures
+Adrian Hope-Bailie (Ripple)
+Evan Schwartz
+Christopher Allen (Blockstream)
+Peter Todd
+Ryan Shea (Blockstack Labs) 
+* Publishing final draft of white paper in two weeks
+* DEX initial spec
+
+Best Practices Regarding Security
+Joshua Daniel (BT) 
+Gladis Filchtiner (Mobile Technology Team) 
+Géry Ducatel (BT) 
+* Track other communities and standards bodies to understand how it contributes to security standards
+* Define security risk/requirement profiles
+* Globally distributed testnets for attacks and tests
+
+Demo
+Rick Dudley (Eris Industries)
+Adrian Gropper (HealthURL) 
+Chris Tse (Monegraph)
+* WebAuth
+* Verified Claims
+* Blockchain ID
+* Blockchain receipts
+* OAuth2/ UMA Auth
+
+Blockchain Vocabularies / Blockchain Voltron
+Rick Dudley (Eris Industries)
+Manu Sporny (Digital Bazaar) 
+Allan Third (The Open University) 
+* Begin discussions / identify community (contact Allan and Manu)
+* Draft vocabulary?
+* Initial scoping – ID subvocabs
+
+Standardize Interface of Consensus Logic
+Ethan Buchman (Tendermint)
+
+Elsewhere
+
+Interledger
+Adrian Hope-Bailie (Ripple)
+Evan Schwartz
+
+W3C Standards (Specifications)
+
+Blockchain ID Auth
+Daniel Buchner (Microsoft) 
+Ryan Shea (Blockstack Labs) 
+Laszlo Gombos (Samsung) 
+Mahesh Kulkarni (Samsung) 
+* Begin discussions with Edge and Samsung browser teams about an experimental prototype
+* Investigate required spec additions to leverage blockchain identities with WebAuth
+
+IPLD and Multiformats
+Rick Dudley (Eris Industries)
+Juan Benet (IPFS Project) 
+Rick Dudley (Eris Industries)
+* Call for people to form a working group (W3C or IETF)
+* Decide home for each sub-protocol (W3C or IETF)
+* Write spec drafts 2 (draft 1 ready)
+* Commit to work tasks and pipeline so community can contribute
+* Publish "IPLD Playground" (IPLD.io)
+* Publish "Multiformats Playground" (Multiformat.io)
+
+Proof and Verification
+Rick Dudley (Eris Industries)
+Wayne Vaughan
+Ethan Buchman (Tendermint)
+Jae Kwon (Tendermint)
+* Publish Chainpoint 2.0
+* Formalize Tendermint SPV (Simple Payment Verification)
+** Generalize to others (maybe using IPLD, DEX, etc.)
+
+LibP2P
+Rick Dudley (Eris Industries)
+Juan Benet (IPFS Project) 
+Rick Dudley (Eris Industries)
+* Gather interested people in this (and other) groups
+* Finish writing current revision of protocol interfaces
+* Create a sub-protocol completeness pipeline (specs, implementations, cross-implementation tests, playground)
+* Publishing LibP2P 1.0 for awareness and docs
+* Figure out working group home and trajectory (involve IETF?)
+
+</pre>
       <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
     </section>
 
@@ -366,6 +486,7 @@
       <h2 id="conclusions">Conclusions</h2>
       <p>Feedback has been very positive, and we expect to continue the conversation and consider various efforts toward incubation.</p>
       <p>We encourage interested people and organizations to join the <a href="https://www.w3.org/community/blockchain/">W3C Blockchain Community Group</a> to keep informed about future developments. We are expanding the scope of that group to include coordination for our various activities around blockchains, including links to related specific-topic community groups, such as the new <a href="https://www.w3.org/community/digital-asset/">Blockchain Digital Assets Community Group</a>that was formed as a result of the workshop.</p>
+      <p>For more consideration on next steps, see the blog post, <a href="">“Building Blocks to Blockchains.”</a></p>
       <p class="todo"><b>TODO:</b> add detailed summary of next steps</p>
     </section>
 
@@ -503,7 +624,7 @@
         <li class="participant">Anthony Nadalin (Microsoft): <a class="position" href="interest/nadalin.html">position statement</a></li>
         <li class="participant">Arvind Narayanan (Princeton)</li>
         <li class="participant">Sanjeev Vittal Narsipur (Accenture): <a href="interest/expressions-of-interest.html#Narsipur">expression of interest</a></li>
-        <li class="participant">Neha Narula (MIT Digital Currency Initiative) <narula@csail.mit.edu></li>
+        <li class="participant">Neha Narula (MIT Digital Currency Initiative)</li>
         <li class="participant">Denis Nazarov (Mediachain Labs): <a class="position" href="interest/nazarov.html">position statement</a>, <a href="interest/expressions-of-interest.html#Nazarov">expression of interest</a></li>
         <li class="participant">Justin Newton (Netki): <a href="interest/expressions-of-interest.html#Newton">expression of interest</a></li>
         <li>Mikko Ohtamaa (Wattcoin): <a href="interest/expressions-of-interest.html#Ohtamaa">expression of interest</a></li>
