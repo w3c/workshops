@@ -193,7 +193,42 @@
         background-color: palegreen;
         font-style: italic;    
       }
-      
+
+      .commitment {
+        background-color: #eee;
+        margin: 2em;
+        padding: 0.001em 1em 0.01em 1em;
+      }
+
+        .commitment h4 {
+          color: #005A9C;
+        }
+
+        .commitment p, .commitment ul {
+          margin-top: -1em;
+          padding-top: 0;
+        }
+     
+    blockquote {
+      background: #f9f9f9;
+      border-left: 10px solid #ccc;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+    }
+
+    blockquote:before {
+      color: #ccc;
+      content: open-quote;
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+    }
+
+    blockquote p {
+      /*display: inline;*/
+    }     
 @media print {
    h1 {
       color: #000;
@@ -277,13 +312,13 @@
       
 
 
-    <p>W3C convened its <a href="https://www.w3.org/2016/04/blockchain-workshop/">first workshop on blockchains</a> on 29–30 June 2016 at the <a href="">MIT Media Lab</a> in Cambridge, Massachusetts, sponsored by <a href="">NTT</a> and <a href="">Blockstream</a>, with additional funding from other W3C Members.</p>
+    <p>The World Wide Web Consortium (W3C) convened its <a href="https://www.w3.org/2016/04/blockchain-workshop/">first workshop on blockchains</a> on 29–30 June 2016 at the <a href="">MIT Media Lab</a> in Cambridge, Massachusetts, sponsored by <a href="">NTT</a> and <a href="">Blockstream</a>, with additional funding from other W3C Members.</p>
 
     <p>This workshop was an initial investigation into the technology around blockchains (or decentralized ledgers), to explore whether any aspects of blockchains were ripe for standardization. The workshop focused on aspects not related to payments, a topic belonging to W3C's existing <a href="http://www.w3.org/Payments/">Web Payments activity</a>, but instead on basic infrastructure for enabling and benefiting from blockchains in a Web-facing context.</p>
 
-    <p>If you're interested in participating in blockchain incubation and discussion at W3C, you can join the <a href="https://www.w3.org/community/blockchain/">W3C Blockchain Community Group</a>, and those interested in continuing the conversation about this or future W3C blockchain workshops can subscribe to the <a href="https://lists.w3.org/Archives/Public/public-blockchain-workshop">public-blockchain-workshop</a> mailing list.</p>
+    <p>If you're interested in participating in blockchain incubation and discussion at W3C, you can join the <a href="https://www.w3.org/community/blockchain/">W3C Blockchain Community Group</a>. If you'd like to continue the conversation about this or future W3C blockchain workshops, you can subscribe to the <a href="https://lists.w3.org/Archives/Public/public-blockchain-workshop">public-blockchain-workshop</a> mailing list.</p>
 
-      <p class="note"><b>Note:</b> The graphics below will be transcribed for accessibility and digital access before the final release of this report.</p>
+      <!-- <p class="note"><b>Note:</b> The graphics below will be transcribed for accessibility and digital access before the final release of this report.</p> -->
 
     <ul>
       <li><a href="#exec">Executive summary</a></li>
@@ -313,47 +348,57 @@
       <h3>Executive Summary</h3>
       <p>This workshop attracted over 100 participants, increased by popular demand over the original goal of 60, and consisted of a mix of newcomers to W3C and existing W3C members. The majority of participants were not previously active in W3C, and many had never participated in any standardization activity. The participants were largely from the <b>existing blockchain communities and projects</b> or from companies offering <b>blockchain services</b>, bringing <b>new expertise, perspectives, and insights</b> into the discussion.</p>
 
-      <p>The organizers strove to have representation by different classes of stakeholders within the larger blockchain community, loosely organized around technology stacks and applications. The technology stacks include Bitcoin, Ethereum, and Hyperledger. Applications include and infrastructure around a decentralized Web (IPFS).</p>
+      <p>The organizers strove to have representation by different classes of stakeholders within the larger blockchain community, loosely organized around technology stacks and applications. The technology stacks include Bitcoin, Ethereum, Hyperledger, and others. Applications include identity and asset management, smart contracts, and infrastructure around a decentralized Web (<a href="https://en.wikipedia.org/wiki/InterPlanetary_File_System" title="InterPlanetary File System" target="_blank">IPFS</a>). The workshop was deliberately aimed at non-payment uses for blockchains, since W3C already has an existing Web Payments activity where payments-related technology is discussed.</p>
 
-      <p>Some of the discussions were open-ended and pertained largely to technical issues and use cases within the blockchain community, but for the most part, the participants were interest in and motivated by possible standardization of some aspects of blockchains.</p>
+      <p>Some of the discussions were open-ended and pertained largely to technical issues and use cases within the blockchain community, but for the most part, the participants were interest in and motivated by possible standardization of some aspects of blockchains. Throughout the two-day workshop, the services of a graphic design facilitator were used to visually document the discussions. What follows is a detailed summary.</p>
 
-      <p class="todo"><b>TODO:</b> add detailed technical summaries</p>
+      <!-- <p class="todo"><b>TODO:</b> add detailed technical summaries</p> -->
     </section>
 
     <section>      
       <h2 id="opening">Opening Remarks</h2>
       <object data="graphics/01_W3C_Opening.svg" width="1000" height="683"> </object> 
-      <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
-    </section>
-
-    <section>      
-      <h2 id="collaboration">Exercise: Collaboration</h2>
-      <object data="graphics/02_Collaboration.svg" width="1000" height="691"> </object> 
-      <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
+      <p>Doug Schepers introduced the workshop, talked about W3C's interest in blockchains, and detailed the format and general topics for the event.</p>
+      <p>Wendy Seltzer summarized W3C's current technical work that might be relevant to blockchain, including authentication, privacy, security, cryptography, and payments.</p>
+      <!-- <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p> -->
     </section>
 
     <section>      
       <h2 id="narayanan">Keynote: Arvind Narayanan</h2>
       <object data="graphics/03_Narayanan.svg" width="1000" height="669"> </object> 
-      <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
+      <p id="narayanan">The keynote/conversation starter was delivered by <a href="http://randomwalker.info/">Arvind Narayanan</a>, an Assistant Professor of Computer Science at Princeton, who leads a research team investigating the security, anonymity, and stability of cryptocurrencies as well as novel applications of blockchains. Narayanan co-created an <a href="https://www.coursera.org/course/bitcointech">online course and textbook</a> on Bitcoin and cryptocurrency technologies, and also leads the Princeton Web Transparency and Accountability project to uncover how companies collect and use personal information. Narayanan's other research interests include decentralization, information privacy and security, and technology policy.</p>
+      <p>Narayanan spoke about the history and impact of Bitcoin and blockchain, about the distinctions between public and private blockchains, about security concerns, and about the need to temper expectations for technical solutions to social problems. He concluded with the following:</p>
+      <blockquote>
+        <p>Standardization can enable new applications! – Power of the blockchain + reach of the web.</p>
+        <ul>
+          <li>A way to avoid human-crypto interaction.</li>
+          <li>A way to keep clients thin and dumb.</li>
+        </ul> 
+        <p>Which blockchain? It matters.</p>
+        <p>Standardization process is a chance to stop and think about social problems &amp; tech.</p>
+      </blockquote>
+      <p><a href="slides/mit-w3c-blockchain-narayanan.pdf">Narayanan's full slide deck</a> is available for review.</p>
     </section>
 
     <section>      
       <h2 id="identity">Topic Session: Identity</h2>
       <object data="graphics/04_Identity.svg" width="1000" height="442"> </object> 
+      <p>The session on identity addressed various aspects of personal identity, authentication, and authorization.</p>
       <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
     </section>
 
     <section>      
       <h2 id="provenance">Topic Session: Provenance</h2>
       <p><a href="graphics/05_Provenance.jpg"><img alt="" src="graphics/05_Provenance_web.jpg" width="1000" height="454"></a></p>
+      <p>The session on provenance addressed various aspects of asset management, legal frameworks, and managing resources via the blockchain.</p>
       <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
     </section>
 
     <section>      
       <h2 id="primitives-sink">Topic Session: Blockchain Primitives and the Kitchen Sink</h2>
       <p><a href="graphics/06_Primitives_Sink.jpg"><img alt="" src="graphics/06_Primitives_Sink_web.jpg" width="1000" height="463"></a></p>
-      <p>Arnaud Le Hors, IBM's representative on the Hyperledger project, cautioned that bacause the blockchain landscape is still under rapid development, any related Web standards should be at the component level and should keep pace with implementations.</p>
+      <p>The final breakout session included many different topics, ranging from blockchain primitives to Internet of Things</p>
+      <p>Notably, Arnaud Le Hors, IBM's representative on the Hyperledger project, cautioned that bacause the blockchain landscape is still under rapid development, any related Web standards should be at the component level and should keep pace with implementations.</p>
       <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
     </section>
 
@@ -366,120 +411,138 @@
         <li><b>Voting:</b> each participant was given 3 stickers: pink for “committed to work on it”; green for ”want to see this done”; and yellow for “serious warning”. Each participant then voted among all of the proposals with only these 3 stickers, forcing them to prioritize.</li>
         <li><b>Evaluation:</b> the facilitators (Christopher Allen and Sita Magnusson) held a public discussion of each proposal, merging and summarizing proposals where appropriate, discerning which proposals had the most support, and moving each proposal into one of three categories: <i>W3C Specification</i>, <i>Needs further discussion</i>, or <i>Elsewhere</i>.</li>
       </ol>
+
       <h3>W3C Specification</h3>
       <p>These are technologies that seem to be mature enough to develop as a technical specification and begin incubation in a W3C Community Group, for possible adoption on the W3C Recommendation (standards) track.</p>
 
+      <article class="commitment">
+        <h4 id="blockchain-id-auth">Blockchain ID Auth</h4>
+        <p><b>contributors:</b> Daniel Buchner (Microsoft), Ryan Shea (Blockstack Labs), Laszlo Gombos (Samsung), Mahesh Kulkarni (Samsung) </p>
+        <p><b>summary:</b> </p>
+        <ul>
+          <li>Begin discussions with Edge and Samsung browser teams about an experimental prototype</li>
+          <li>Investigate required spec additions to leverage blockchain identities with WebAuth</li>
+        </ul>
+      </article>
+
+      <article class="commitment">
+        <h4 id="ipld-and-multiformats">IPLD and Multiformats</h4>
+        <p><b>contributors:</b> Rick Dudley (Eris Industries), Juan Benet (IPFS Project) </p>
+        <p><b>summary:</b> </p>
+        <ul>
+          <li>Call for people to form a working group (W3C or IETF)</li>
+          <li>Decide home for each sub-protocol (W3C or IETF)</li>
+          <li>Write spec drafts 2 (draft 1 ready)</li>
+          <li>Commit to work tasks and pipeline so community can contribute</li>
+          <li>Publish "IPLD Playground" (IPLD.io)</li>
+          <li>Publish "Multiformats Playground" (Multiformat.io)</li>
+        </ul>
+      </article>
+
+      <article class="commitment">
+        <h4 id="proof-and-verification">Proof and Verification</h4>
+        <p><b>contributors:</b> Rick Dudley (Eris Industries), Wayne Vaughan, Ethan Buchman (Tendermint), Jae Kwon (Tendermint)</p>
+        <p><b>summary:</b> </p>
+        <ul>
+          <li>Publish Chainpoint 2.0</li>
+          <li>Formalize Tendermint SPV (Simple Payment Verification)</li>
+          <li>Generalize to others (maybe using IPLD, DEX, etc.)</li>
+        </ul>
+      </article>
+
+      <article class="commitment">
+        <h4 id="libp2p">LibP2P</h4>
+        <p><b>contributors:</b> Rick Dudley (Eris Industries), Juan Benet (IPFS Project) </p>
+        <p><b>summary:</b> </p>
+        <ul>
+          <li>Gather interested people in this (and other) groups</li>
+          <li>Finish writing current revision of protocol interfaces</li>
+          <li>Create a sub-protocol completeness pipeline (specs, implementations, cross-implementation tests, playground)</li>
+          <li>Publishing LibP2P 1.0 for awareness and docs</li>
+          <li>Figure out working group home and trajectory (involve IETF?)</li>
+        </ul>
+      </article>
+
       <h3>Needs Further Discussion</h3>
-      <p>These were promising ideas that need further conversation to see if they can be developed into a specification, including identifying related or competing work and finding points of integration.</p>
+      <p>These were promising ideas that need further conversation to see if they can be developed into a specification, including identifying related or competing work and finding points of integration.</p>    
+
+      <article class="commitment">
+        <h4 id="digital-assets">Digital Assets</h4>
+        <p><b>contributors:</b> Kenji Saito (Keio University, BlockchainHub Inc), Tarique A. Bhuiyan (Hashkloud)</p>
+        <p><b>summary:</b> </p>
+      </article>
+
+      <article class="commitment">
+        <h4 id="key-management-outside-the-browser">Key Management Outside the Browser</h4>
+        <p><b>contributors:</b> Won-Beom Kim 김원범 (Blocko Inc)</p>
+        <p><b>summary:</b> </p>
+        <ul>
+          <li>Identify existing standards</li>
+          <li>Discuss use cases</li>
+        </ul>
+      </article>
+
+      <article class="commitment">
+        <h4 id="smart-signatures">Smart Signatures</h4>
+        <p><b>contributors:</b> Adrian Hope-Bailie (Ripple), Evan Schwartz (Ripple), Christopher Allen (Blockstream), Peter Todd, Ryan Shea (Blockstack Labs) </p>
+        <p><b>summary:</b> </p>
+        <ul>
+          <li>Publishing final draft of white paper in two weeks</li>
+          <li>DEX initial spec</li>
+        </ul>
+      </article>
+
+      <article class="commitment">
+        <h4 id="best-practices-regarding-security">Best Practices Regarding Security</h4>
+        <p><b>contributors:</b> Joshua Daniel (BT), Gladis Filchtiner (Mobile Technology Team), Géry Ducatel (BT) </p>
+        <p><b>summary:</b> </p>
+        <ul>
+          <li>Track other communities and standards bodies to understand how it contributes to security standards</li>
+          <li>Define security risk/requirement profiles</li>
+          <li>Globally distributed testnets for attacks and tests</li>
+        </ul>
+      </article>
+
+      <article class="commitment">
+        <h4 id="demo">Demo</h4>
+        <p><b>contributors:</b> Rick Dudley (Eris Industries), Adrian Gropper (HealthURL), Chris Tse (Monegraph)</p>
+        <p><b>summary:</b> </p>
+        <ul>
+          <li>WebAuth</li>
+          <li>Verified Claims</li>
+          <li>Blockchain ID</li>
+          <li>Blockchain receipts</li>
+          <li>OAuth2/ UMA Auth</li>
+        </ul>
+      </article>
+
+      <article class="commitment">
+        <h4 id="blockchain-vocabularies-voltron">Blockchain Vocabularies / Blockchain Voltron</h4>
+        <p><b>contributors:</b> Rick Dudley (Eris Industries), Manu Sporny (Digital Bazaar), Allan Third (The Open University) </p>
+        <p><b>summary:</b> </p>
+        <ul>
+          <li>Begin discussions / identify community </li>
+          <li>Draft vocabulary?</li>
+          <li>Initial scoping – ID subvocabs</li>
+        </ul>
+      </article>
+
+      <article class="commitment">
+        <h4 id="standardize-interface-of-consensus-logic">Standardize Interface of Consensus Logic</h4>
+        <p><b>contributors:</b> Ethan Buchman (Tendermint)</p>
+        <p><b>summary:</b> </p>
+      </article>
 
       <h3>Elsewhere</h3>
       <p>These were ideas that might be mature enough for a specification, but likely don't fit into W3C's areas of expertise, but might fit at other standards organizations like IETF.</p>
 
+      <article class="commitment">
+        <h4 id="interledger">Interledger</h4>
+        <p><b>contributors:</b> Adrian Hope-Bailie (Ripple), Evan Schwartz (Ripple)</p>
+        <p><b>summary:</b> </p>
+      </article>
 
       <p>Note that there were many other topics discussed at the workshop, and this session focused only on those topics that participants proposed as possible standards.</p>
-
-<pre>
-
-Commitments
-
-W3C Community (Discussions)
-
-Digital Assets
-Kenji Saito (Keio University, BlockchainHub Inc) 
-Tarique A. Bhuiyan (Hashkloud)
-
-
-Key Management Outside the Browser
-Won-Beom Kim 김원범 (Blocko Inc)
-* Identify existing standards
-* Discuss use cases
-
-Smart Signatures
-Adrian Hope-Bailie (Ripple)
-Evan Schwartz
-Christopher Allen (Blockstream)
-Peter Todd
-Ryan Shea (Blockstack Labs) 
-* Publishing final draft of white paper in two weeks
-* DEX initial spec
-
-Best Practices Regarding Security
-Joshua Daniel (BT) 
-Gladis Filchtiner (Mobile Technology Team) 
-Géry Ducatel (BT) 
-* Track other communities and standards bodies to understand how it contributes to security standards
-* Define security risk/requirement profiles
-* Globally distributed testnets for attacks and tests
-
-Demo
-Rick Dudley (Eris Industries)
-Adrian Gropper (HealthURL) 
-Chris Tse (Monegraph)
-* WebAuth
-* Verified Claims
-* Blockchain ID
-* Blockchain receipts
-* OAuth2/ UMA Auth
-
-Blockchain Vocabularies / Blockchain Voltron
-Rick Dudley (Eris Industries)
-Manu Sporny (Digital Bazaar) 
-Allan Third (The Open University) 
-* Begin discussions / identify community (contact Allan and Manu)
-* Draft vocabulary?
-* Initial scoping – ID subvocabs
-
-Standardize Interface of Consensus Logic
-Ethan Buchman (Tendermint)
-
-Elsewhere
-
-Interledger
-Adrian Hope-Bailie (Ripple)
-Evan Schwartz
-
-W3C Standards (Specifications)
-
-Blockchain ID Auth
-Daniel Buchner (Microsoft) 
-Ryan Shea (Blockstack Labs) 
-Laszlo Gombos (Samsung) 
-Mahesh Kulkarni (Samsung) 
-* Begin discussions with Edge and Samsung browser teams about an experimental prototype
-* Investigate required spec additions to leverage blockchain identities with WebAuth
-
-IPLD and Multiformats
-Rick Dudley (Eris Industries)
-Juan Benet (IPFS Project) 
-Rick Dudley (Eris Industries)
-* Call for people to form a working group (W3C or IETF)
-* Decide home for each sub-protocol (W3C or IETF)
-* Write spec drafts 2 (draft 1 ready)
-* Commit to work tasks and pipeline so community can contribute
-* Publish "IPLD Playground" (IPLD.io)
-* Publish "Multiformats Playground" (Multiformat.io)
-
-Proof and Verification
-Rick Dudley (Eris Industries)
-Wayne Vaughan
-Ethan Buchman (Tendermint)
-Jae Kwon (Tendermint)
-* Publish Chainpoint 2.0
-* Formalize Tendermint SPV (Simple Payment Verification)
-** Generalize to others (maybe using IPLD, DEX, etc.)
-
-LibP2P
-Rick Dudley (Eris Industries)
-Juan Benet (IPFS Project) 
-Rick Dudley (Eris Industries)
-* Gather interested people in this (and other) groups
-* Finish writing current revision of protocol interfaces
-* Create a sub-protocol completeness pipeline (specs, implementations, cross-implementation tests, playground)
-* Publishing LibP2P 1.0 for awareness and docs
-* Figure out working group home and trajectory (involve IETF?)
-
-</pre>
-      <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
     </section>
 
     <section>      
@@ -487,8 +550,8 @@ Rick Dudley (Eris Industries)
       <p>Feedback has been very positive, and we expect to continue the conversation and consider various efforts toward incubation.</p>
       <p>We encourage interested people and organizations to join the <a href="https://www.w3.org/community/blockchain/">W3C Blockchain Community Group</a> to keep informed about future developments. We are expanding the scope of that group to include coordination for our various activities around blockchains, including links to related specific-topic community groups, such as the new <a href="https://www.w3.org/community/digital-asset/">Blockchain Digital Assets Community Group</a>that was formed as a result of the workshop.</p>
       <p>For more consideration on next steps, see the blog post, <a href="">“Building Blocks to Blockchains.”</a></p>
-      <p class="todo"><b>TODO:</b> add detailed summary of next steps</p>
-    </section>
+<!--       <p class="todo"><b>TODO:</b> add detailed summary of next steps</p>
+ -->    </section>
 
     <section>      
       <h2 id="press">Press</h2>
@@ -500,6 +563,12 @@ Rick Dudley (Eris Industries)
       </ul>
     </section>
     
+
+    <section>      
+      <h2 id="collaboration">Exercise: Collaboration</h2>
+      <object data="graphics/02_Collaboration.svg" width="1000" height="691"> </object> 
+      <p>As part of the warmup on the first day, just after the W3C introductions, Christopher Allen organized a meet-and-greet exercise, where each table tackled the question of the “secret sauce” of collaboration. Each participant recounted a story of a successful collaboration, and collectively, the table decided on a single “lesson learned”, which was reported back to the workshop as a whole. This exercise formed the basis for the ”topic table and report” format used through the rest of the two days.</p>
+    </section>
 
     <section>
       <h2 id="committee">Program Committee</h2>
@@ -691,7 +760,7 @@ Rick Dudley (Eris Industries)
       <p>Notably, Susan Westhaver, W3C's meeting planner, was crucial to the success of the logistics planning and coordination, and thoughtfully and diligently led all of the background event work with other W3C team including Amy van der Hiel and Maria Auday; Susan and Veronica Thom helped keep the planning timeline on track, as well. Lots of W3C team contributed in important ways: Amy Guy stepped up to coordinate the scribing of minutes by various volunteers, including W3C's Sandro Hawke, Jeff Jaffe, Alan Bird, and Wendy Seltzer, and the tireless and lightning fingers of Bryan Bishop; Jeff Jaffe suggested delving into blockchain initially, and Wendy Seltzer help guide my planning steps; and Harry Halpin was crucial in providing technical background and introductions throughout the planning stages to bring the right people to the event; and Susan Westhaver, Ralph Swick, Amy van der Hiel, Maria Auday, Tim Berners-Lee, and other W3C team (among numerous workshop attendees) helped set up and clean up after the event.</p>
       <p>The chairs and the program committee each provided unique and crucial planning and technical guidance at all stages of planning and during the event, and many other blockchain experts generously provided insight through conversations leading up to the event.</p>
       <p>The MIT Media Lab was an excellent venue, generously provided by Professor Sandy Pentland, secured by the great initiative of Dazza Greenwood and the logistics and details of Nicole Freedman, along with help from Neha Narula of MIT's Digital Currency Initiative (DCI).</p> 
-      <p>Dazza Greenwod was a flexible planning partner with enormous initative and imagination, wo provided video webinars leading up the event and live video streams throughout the workshop. The event wouldn't have happened without him.</p>
+      <p>Dazza Greenwood was a flexible planning partner with enormous initative and imagination, who provided video webinars leading up the event and live video streams throughout the workshop. The event wouldn't have happened without him.</p>
       <p>Neha Narula brought in many participants from MIT Media Lab and DCI and provided keen and directed technical guidance.</p>
       <p>Daniel Buchner helped drive the topics and lead coordinated discussions in and out of the event to lead to productive opportunities and outcomes.</p>
       <p>Christopher Allen went above and beyond for the event, effectively an informal chair; he helped with the schedule and to define, explain, and facilitate the event format, which was a great success, and he suggested and secured Blockstream sponsorship for the exceptional graphical facilitation by Sita Magnuson from dpict (who provided the images in this report).</p>
