@@ -1,0 +1,52 @@
+Well I think the biggest success is that there’s a lot of positive-if not optimistic-excitement around the opportunities for blockchain for a variety of different verticals. I’ve been to an insane amount of bitcoin meetups, conferences and events and the conversation here seems also more pragmatic than usual. And that’s directly related to bringing a diverse group of people into the room… There are the usual blockchain enthusiasts but there are also more general web developers here and several legacy institutions. 
+
+We’re all trying to get to the same outcome, some a little more extremely than others, but we understand the current systems aren’t working as effectively as they should be in this age of the Web. 
+
+We have some use cases; we have applications that are deployed and being used. And now we’re here to standardize because standardization promotes competition while eliminating inefficiencies to advancing new Web tech. 
+
+---
+
+To recap where the room sees the biggest opportunities based on the submission papers, breakout discussions and chats: 
+
+We’ve got Identity. Really what we’re talking about here is improving the online identity process, so that consumers don’t have to input their personal information over and over again when signing up for applications. Plus deploying a more secure form of online identity not reliant on usernames and passwords. 
+
+There are a couple concerns here, namely that with irrevocable or immutable identity, what happens when there is account takeover, theft, etc. I know several people in the room are working on implementations to backtrack transactions when these things happen but these solutions must be communicated. 
+
+One thing mentioned during an identity breakout was that with certain functionality, stealing someone’s identity would be damn near impossible. But damn near still leaves room for possible and we want to be sure we don’t screw up someone’s life. 
+
+There was also a lot of discussion around provenance. Maybe I had tuned out, but a lot of this revolved around content creators and licensing. We want people to create; and we want people to get credit for what they create. 
+
+And this was one of the first use cases around bitcoin and blockchain that’s persisted. It started with bitcoin and micropayments bt now that conversation has expanded. 
+
+A note there: Remember when creating these things, you can come to a business with a new architecture for doing these things (instead of subscriptions) but you must also come to them with a business case so they can retain their revenue. Or at least a siginficant portion because these players have put substantial time and money into their current systems. 
+
+---
+
+    It was surprising to see that there wasn’t greater representation from the larger or more well-known organizations working on blockchain technology and Bitcoin. Perhaps now that this group has momentum, more people will attend future events.
+
+-right now its about competitive advantage… or at least I think.
+
+-there will be people against this or not only against but unwilling to do the work, but standardization is needed 
+
+
+Testbeds where you can experiment with blockchain applications and solutions. I think these are going to be very important to control things like The DAO attack and subsequtn jumble from happening, especially as we’re trying to get consumer-those consumers that are outside the cryptocurrency space-adoption. 
+
+ARVIND: 
+
+-note of caution -tendency in blockchain world is to jump to far and try to find technological solutions to social problems -heavy responsibility when dealing with humans -stadardization can act as a key check to this problem -offers opportunity for introspection -tech were putting on a pedastel is it applicable for everyone -think about the pros and cons -acts as a point of regulation for how we want to use this technology 
+
+One thing that I’m highly interested in (should you care about my opinions) is the language surrounding cryptocurreny and blockchain. Sure, it’s semantics. But I think defining some of these terms could be useful not only for the community but also, ultimately, enterprise and consumer users. And if we finally define exactly what a blockchain is, I’ll get some relief from the trolls on Twitter. 
+
+    There is an abundant use of the word blockchain and in many cases it is not describing the nakamoto-style blockchain, but nonetheless some of the concepts are interesting regardless of the buzzwords used to summarize them.
+
+
+But it’s obvious, blockchain is a web technology and if this industry is going to progress, we’re going to need to work together to find areas to standardize. 
+
+    The process seems to move slowly, but that may be a good thing when it comes to organizing and creating standards or specifications
+
+    It was a good way to hear about new concepts within the “Bitcoin & Related-Technology” community and where standards are coalescing
+
+    The environment encourages respectful deliberation and a process for filtering consensus regarding what is interesting, dangerous, or worth contribution
+
+
+So, plug for the W3C, join the organization and start some groups.  
