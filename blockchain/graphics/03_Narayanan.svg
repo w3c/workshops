@@ -1,0 +1,100 @@
+<svg  xmlns="http://www.w3.org/2000/svg" version="1.1" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="100%" height="100%" viewBox="0 0 1000 669"
+  onload="init()">     
+      <title>Arvind Narayanan: Blockchains, the Web, and Standardization</title>
+
+  <script>
+    function init() {
+      var hilites = document.querySelectorAll(".hilite");
+      // console.log(hilites)
+      for (var i = 0, iLen = hilites.length; iLen > i; i++) {
+        var hiliteEl = hilites[i];
+        var titleEl = hiliteEl.querySelector("title");
+        var titleID = titleEl.textContent.replace(/\W+/g, "-");
+        hiliteEl.setAttribute( "id", titleID);
+        console.log(hilites[i].id);
+
+        hiliteEl.addEventListener("mouseover", hilite, false);
+        hiliteEl.addEventListener("mouseout", lolite, false);
+      }
+    }
+
+    function hilite(evt) {
+      // console.log("ok");
+      var el = evt.target;
+      var id = el.getAttribute("id");
+
+      var scale = 1.3;
+
+      var bbox = el.getBBox();
+      var cx = (-bbox.x + ((bbox.x/scale) + ((bbox.width/2)/scale))) - ((bbox.width/2));
+      var cy = -bbox.y + ((bbox.y/scale) + ((bbox.height/2)/scale)) - ((bbox.height/2));
+
+      // console.log(id)
+      var clip = document.getElementById("hilite-clip-use");
+      clip.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#" + id);
+
+
+      var magnifier = document.getElementById("hilite-magnifier");
+      magnifier.setAttribute( "x", cx);
+      magnifier.setAttribute( "y", cy);
+      magnifier.setAttribute( "transform", "scale(" + scale + ")");
+    }
+
+    function lolite(evt) {
+      var clip = document.getElementById("hilite-clip-use");
+      clip.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#");
+    }
+  </script>
+
+  <defs>
+    <image id="source-image" width="1000" height="669" xlink:href="03_Narayanan.jpg"/>
+
+
+    <clipPath id="hilite-clip">
+      <use id="hilite-clip-use" xlink:href="#"/>
+    </clipPath>
+
+    <mask id="mask">
+      <rect width="100%" height="100%" fill="white" opacity="0.9"/>
+    </mask> 
+
+  </defs>
+
+  <style type="text/css">
+    .hilite {
+      fill: none;
+      stroke: none;
+      pointer-events: all;
+    }
+
+    .test {
+      fill: yellow;
+      stroke: red;
+      stroke-width: 2px;
+      fill-opacity: 0.5;
+    }
+
+    #hilite-magnifier {
+      pointer-events: none;
+    }
+  </style>
+  <use xlink:href="#source-image" mask="url(#mask)" />
+
+  <path class="hilite" d="M145,22 H315 V65 H145 Z">
+    <title>public vs. private</title>
+  </path>
+
+  <path class="hilite" d="M40,200 H235 V275 H40 Z">
+    <title>The power of blockchains</title>
+  </path>
+
+  <path class="hilite" d="M230,300 H360 V375 H230 Z">
+    <title>The reach of the Web</title>
+  </path>
+
+  <use id="hilite-magnifier" xlink:href="#source-image" clip-path="url(#hilite-clip)"/>
+
+</svg>
+
