@@ -23,9 +23,15 @@
         border-collapse: collapse; background:#005A9C; border: hidden;
         font-size: smaller; font-weight: bold}
       .menu li {display: table-cell; border: 1px solid white; border-top: none;
-        padding: 0.3em 0.2em; text-align:center; vertical-align: middle}
-      .menu a {display: block; color:#eee; text-decoration: none}
+        padding: 0.3em 0.2em; text-align:center; vertical-align: middle;}
+      .menu a {display: block; color:#eee; text-decoration: none;}
       .menu a:hover {background:#a2b3a1; color: black}
+        .menu a.active-tab {
+          background: white;
+          outline: #a2b3a1;
+          color: #005A9C;
+        }
+
       ul {margin-left: 0; padding-left: 1em; list-style: square}
       blockquote {margin-left: 1em}
       dd {margin: 0 0 0.6em 0}
@@ -274,22 +280,14 @@
     <h2>A W3C Workshop on Distributed Ledgers on the Web</h2>
     <p>29–30 June 2016, MIT Media Lab, Cambridge, Massachusetts</p>
     
-    <article id="notification">
-      <p>This workshop report is still under development and collaboration.
-        <br>
-        If you have suggestions for improving it, you can make <a href="https://github.com/w3c/workshops/blob/gh-pages/blockchain/report.html">pull requests on Github</a>, or email Doug Schepers <a href="mailto:schepers@w3.org">&lt;schepers@w3.org&gt;</a>.</p>
-    </article>   
-
     <ul class="menu">
-      <li><a href="#top">Intro</a>
-        <!-- <li><a href="agenda">Agenda</a> -->
-        <!-- <li><a href="report">Report</a> --> </li>
-      <li><a href="#participate">How to Participate</a> </li>
-      <li><a href="#logistics">Logistics</a> </li>
-      <li><a href="#program">Program Committee</a></li>
-      <li><a href="#people">People</a></li>
-      <li><a href="#schedule">Workshop Schedule</a></li>
-      <!-- <li><a href="http://www.w3.org/2016/04/annotation/report.html">Workshop Report</a></li> -->
+      <li><a href="#" class="active-tab">Report</a></li>
+      <li><a href="index.html#top">Intro</a></li>
+      <li><a href="index.html#participate">How to Participate</a> </li>
+      <li><a href="index.html#logistics">Logistics</a> </li>
+      <li><a href="index.html#program">Program Committee</a></li>
+      <li><a href="index.html#people">People</a></li>
+      <li><a href="index.html#schedule">Workshop Schedule</a></li>
     </ul>
 
     <aside class="box" id="host">
@@ -510,7 +508,7 @@
           <li>Figure out working group home and trajectory (involve IETF?)</li>
         </ul>
       </article>
-      
+
       <h3>Needs Further Discussion</h3>
       <p>These were promising ideas that the group felt need further conversation to see if they can be developed into specifications, including identifying related or competing work and finding points of integration.</p>    
 
