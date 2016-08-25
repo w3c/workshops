@@ -232,10 +232,12 @@
       vertical-align: -0.4em;
     }
 
-    blockquote p {
+    blockquote > p, blockquote > ul {
+      margin-bottom: 1.5em;
       /*display: inline;*/
-    }     
-@media print {
+    }   
+
+  @media print {
    h1 {
       color: #000;
       background: none;
@@ -328,7 +330,22 @@
           <li><a href="#identity">Topic Session: Identity</a></li>
           <li><a href="#provenance">Topic Session: Provenance</a></li>
           <li><a href="#primitives-sink">Topic Session: Blockchain Primitives and the Kitchen Sink</a></li>
-          <li><a href="#commitments">Commitments</a></li>
+          <li><a href="#commitments">Commitments</a>
+            <ul>
+              <li><a href="#blockchain-id-auth">Blockchain ID Auth</a></li>
+              <li><a href="#proof-and-verification">Proof and Verification</a></li>
+              <li><a href="#ipld-and-multiformats">IPLD and Multiformats</a></li>
+              <li><a href="#libp2p">LibP2P</a></li>
+              <li><a href="#digital-assets">Digital Assets</a></li>
+              <li><a href="#key-management-outside-the-browser">Key Management Outside the Browser</a></li>
+              <li><a href="#smart-signatures">Smart Signatures</a></li>
+              <li><a href="#best-practices-regarding-security">Best Practices Regarding Security</a></li>
+              <li><a href="#demo">Demo</a></li>
+              <li><a href="#blockchain-vocabularies-voltron">Blockchain Vocabularies / Blockchain Voltron</a></li>
+              <li><a href="#standardize-interface-of-consensus-logic">Standardize Interface of Consensus Logic</a></li>
+              <li><a href="#interledger">Interledger</a></li>
+            </ul>
+          </li>
         </ul>  
       </li>    
       <li><a href="#slides">Slides and Notes</a></li>
@@ -422,8 +439,8 @@
           <li>Begin discussions with Edge and Samsung browser teams about an experimental prototype</li>
           <li>Investigate required spec additions to leverage blockchain identities with WebAuth</li>
         </ul>
-        <p><b>post-workshop progress report:</b></p> 
 
+        <p><b>post-workshop progress report:</b></p> 
         <blockquote>
           <p>Once the first version of the open source blockchain identity layer is up on Azure (release imminent), we can turn our attention to experimenting with cross-org integrations and standards. One high-value standard is the augmentation of the Web Auth spec to allow users to login via blockchain identity keys. The Web Auth flow is not far off from the exiting blockchain identity verification flow, so this should be less difficult than most of the blockchain-centric browser integrations discussed at the W3C blockchain event.</p>
 
@@ -436,20 +453,6 @@
       </article>
 
       <article class="commitment">
-        <h4 id="ipld-and-multiformats">IPLD and Multiformats</h4>
-        <p><b>contributors:</b> Rick Dudley (Eris Industries), Juan Benet (IPFS Project) </p>
-        <p><b>summary:</b> </p>
-        <ul>
-          <li>Call for people to form a working group (W3C or IETF)</li>
-          <li>Decide home for each sub-protocol (W3C or IETF)</li>
-          <li>Write spec drafts 2 (draft 1 ready)</li>
-          <li>Commit to work tasks and pipeline so community can contribute</li>
-          <li>Publish "IPLD Playground" (IPLD.io)</li>
-          <li>Publish "Multiformats Playground" (Multiformat.io)</li>
-        </ul>
-      </article>
-
-      <article class="commitment">
         <h4 id="proof-and-verification">Proof and Verification</h4>
         <p><b>contributors:</b> Rick Dudley (Eris Industries), Wayne Vaughan (Tierion), Ethan Buchman (Tendermint), Jae Kwon (Tendermint)</p>
         <p><b>summary:</b> </p>
@@ -458,8 +461,8 @@
           <li>Formalize Tendermint SPV (Simple Payment Verification)</li>
           <li>Generalize to others (maybe using IPLD, DEX, etc.)</li>
         </ul>
-        <p><b>post-workshop progress reports:</b></p> 
 
+        <p><b>post-workshop progress reports:</b></p> 
         <blockquote>
           <p>Proof-of-Existence is a general method in blockchains for proving the existence of a transaction in the blockchain, or even the value of the blockchain application state.  As an example in the former case, proof-of-existence can be used to prove the existence of an unspent transaction output (UTXO) in Bitcoin, but it cannot be used to prove that the transaction had not been spent.  As an example in the latter case, proof-of-existence can be used for blockchain applications that support Merkle-ized search trees (such as Ethereum's Patricia Trie) to prove the current value of a key.  The goal is to create a standardize proof-of-existence data structure that works for all popular consensus systems and all popular Merkle-ized search trees.</p>
 
@@ -497,6 +500,63 @@
       </article>
 
       <article class="commitment">
+        <h4 id="ipld-and-multiformats">IPLD and Multiformats</h4>
+        <p><b>contributors:</b> Rick Dudley (Eris Industries), Juan Benet (IPFS Project) </p>
+        <p><b>summary:</b> </p>
+        <ul>
+          <li>Call for people to form a working group (W3C or IETF)</li>
+          <li>Decide home for each sub-protocol (W3C or IETF)</li>
+          <li>Write spec drafts 2 (draft 1 ready)</li>
+          <li>Commit to work tasks and pipeline so community can contribute</li>
+          <li>Publish "IPLD Playground" (IPLD.io)</li>
+          <li>Publish "Multiformats Playground" (Multiformat.io)</li>
+        </ul>
+
+        <p><b>post-workshop progress report:</b></p> 
+        <blockquote>
+          <p><a href="https://github.com/multiformats/multiformats">multiformats</a> </b>is a suite of self-describing formats to increase interoperability, reduce the cost of upgrading protocols, and enable choice in contentious design spaces. A design goal is to enable systems to treat values opaquely whenever possible, and make no assumptions, so that other systems, including future iterations, may interoperate cleanly and be deployed cheaply. Addresses: &quot;Never going to change&quot; considered harmful.</p>
+          <p><b>Most relevant multiformats:</b></p>
+          <ul>
+            <li><b><a href="https://github.com/multiformats/multihash">multihash</a></b> is a format that self-describes cryptographic hash function outputs, so that systems can upgrade cleanly after cryptographic functions break. This is an important contribution, that many projects are adopting. Multihash is ready to be standardized, either through W3C or IETF. (IETF may be better candidate, as it is very low level). <b>(Important note: Multihash is a time sensitive thing. There are many projects wanting to adopt it right now and are pressing for a standard spec to be written)</b></li>
+            <li><b><a href="https://github.com/multiformats/multiaddr">multiaddr</a> </b>is a format that self-describes network addresses, so that distributed systems (like the web, blockchains, peer-to-peer systems) can address nodes in the network across a large range of network transports. Multiaddr is particularly useful in browsers and other &quot;exotic transport&quot; environments, wherever &quot;opening up a publicly reachable TCP/IPv4 address&quot; is not an easy option.</li>
+            <li><b>multicodec </b>is a format that self-describes serialized data, encodings, and other formats. This enables systems to address and manipulate opaque content they may not know how to use. Similar in spirit and compatible with MimeTypes. Very useful to bridge and link across blockchains.</li>
+            <li><b>multikey </b>is a format that self-describes cryptographic keys, proofs, and other kinds of cryptographic outputs. Multikey helps different cryptosystems (eg different blockchains) link, look into, and understand each others algorithm choices, key material, and other cryptographic artifacts.</li> 
+          </ul>
+
+          <p><b>Actionables:</b></p>
+          <ul>
+            <li>Multihash is ready for standardization, is very small, and would be a great candidate to start with. It is also a very time sensitive thing. Next steps are to find a home (W3C or IETF?) write an W3C or IETF style draft, and get it reviewed.</li>
+            <li>Multiformats as a project is being established (website, documentation, clean repos in own org, instead of IPFS org, more implementations, etc)</li>
+            <li>Publish <a href="http://mutliformats.io">mutliformats.io</a></li>
+            <li>Publish Multihash Playground</li>  
+          </ul>
+
+          <p><b><a href="https://github.com/ipld/specs/tree/master/ipld">IPLD</a> </b>is a new interchange format for hash-linked data structures.<b> </b>Think of it like Web Principles meet Blockchains. It can enable massive interoperability between cryptosystems, including blockchains, IPFS, git, bittorrent, and more. IPLD is being developed by the IPFS project, as a standalone standard and tooling. IPLD is a &quot;thin waist&quot; protocol, and can bring blockchain links to the web in a very clean way. It is interoperable natively with all the blockchains (btc, eth, ...), with IPFS, git, bittorrent, and more. Consider links like:</p>
+
+          <p>We have these and other versions of links working:</p></p>
+          <ul>
+            <li><b>Bitcoin Txn</b>: ipld:/&lt;bitcoin-block-hash&gt;/tx/10/outputs/0  or  ipld:/&lt;bitcoin-txn-hash&gt;/10/outputs/0</li>
+            <li><b>Ethereum Txn</b>: ipld:/&lt;ethereum-block-hash&gt;/previous/previous/tx/10/outputs/0</li>
+            <li><b>IPFS files</b>: ipld:/&lt;file-hash&gt;/foo/bar/baz.png</li>
+            <li><b>git commits</b>: ipld:/&lt;commit-hash&gt;/parent/parent/tree/foo/bar/baz.png</li>
+          </ul>
+
+          <p>IPLD is already adopted by several organizations, and in the long term they need more formal standards. Several research groups are also adopting and using IPLD. Momentum is growing fast!</p>
+
+          <p><b>Actionables:</b></p>
+          <ul>
+            <li>IPLD belongs in W3C. Speak with W3C about standardizing IPLD.</li>
+            <li>Write a W3C draft of the IPLD spec.</li>
+            <li>Write a W3C draft for CBOR-LD (JSON-LD meets CBOR, which is useful for IPLD)</li>
+            <li>Publish <a href="http://ipld.io">ipld.io</a> website</li>
+            <li>Publish IPLD Playground (like JSON-LD playground)</li>
+          </ul>
+
+          <footer>– Juan Benet (IPFS Project)</footer>
+        </blockquote>
+      </article>
+
+      <article class="commitment">
         <h4 id="libp2p">LibP2P</h4>
         <p><b>contributors:</b> Rick Dudley (Eris Industries), Juan Benet (IPFS Project) </p>
         <p><b>summary:</b> </p>
@@ -507,6 +567,25 @@
           <li>Publishing LibP2P 1.0 for awareness and docs</li>
           <li>Figure out working group home and trajectory (involve IETF?)</li>
         </ul>
+
+        <p><b>post-workshop progress report:</b></p> 
+        <blockquote>
+          <p><b><a href="https://github.com/libp2p/libp2p">libp2p</a> </b>is a modular networking library for peer-to-peer protocols. It solves many common problems in small pieces, so that systems can use only what they strictly need. libp2p has been extracted from the IPFS project, and now forms the basis of several other peer-to-peer protocols. It has many sub-pieces, from making exotic network Transports usable in p2p software, to making it possible to connect nodes in the browser and deployment scenarios, to common modules for Peer Discovery, Peer Routing, Content Routing, Pub/Sub, and even Consensus.  It is getting adoption beyond IPFS and it would be very useful to start a working group to formally standardize interfaces. This will help larger organizations trust the standards, and has been explicitly requested.</p>
+
+          <p>Most relevant interfaces:</p>
+          <ul>
+            <li><b>Transports: </b>many blockchains are not able to be used in some environments (like browsers) because of connectivity problems. libp2p transports can make it possible or much easier to connect nodes across exotic deployments (WebRTC, Websockets, QUIC, SCTP, Bluetooth, Tor, i2p, ...)</li>
+            <li><b>Consensus: </b>many blockchains, or systems building on or related to blockchains, require clean interfaces around consensus. This would enable many applications to swap out the low-level implementation of a consensus protocol, and make it easier to build interoperable applications. (Eg have applications that work with Ethereum, Bitcoin, Tendermint, etc.)</li>
+          </ul>
+
+          <p><b>Actionables:</b></p>
+          <ul>
+            <li>Find a standardization home -- IETF or W3C? and start a working group.</li>
+            <li>Identify and start drafting the most relevant specs to blockchain groups.</li>
+          </ul>
+
+          <footer>– Juan Benet (IPFS Project)</footer>
+        </blockquote>
       </article>
 
       <h3>Needs Further Discussion</h3>
@@ -527,6 +606,7 @@
           <li>Discuss use cases</li>
         </ul>
 
+        <p><b>post-workshop progress report:</b></p> 
         <blockquote>
           <p>Blockchain key management outside browser is related to the <a href="https://www.w3.org/2016/04/blockchain-workshop/interest/blocko.html">position statement</a> I submitted.</p>
 
@@ -576,6 +656,7 @@
           <li>OAuth2/ UMA Auth</li>
         </ul>
 
+        <p><b>post-workshop progress report:</b></p> 
         <blockquote>
           <p>Standards for Self-Sovereign Support Technology Discussion</p>
 
@@ -595,6 +676,7 @@
           <li>Initial scoping – ID subvocabs</li>
         </ul>
 
+        <p><b>post-workshop progress report:</b></p> 
         <blockquote>
           <p>My take on the goal is to document a common data model and data vocabulary for a large subset of Blockchain technologies. Provide one or more syntaxes for expressing this data model so that it will be possible for Blockchains to enable reads and writes via standards-track messages and protocols.</p>
 
