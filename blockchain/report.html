@@ -385,14 +385,14 @@
       <h2 id="identity">Topic Session: Identity</h2>
       <object data="graphics/04_Identity.svg" width="1000" height="442"> </object> 
       <p>The session on identity addressed various aspects of personal identity, authentication, and authorization.</p>
-      <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
+      <!-- <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p> -->
     </section>
 
     <section>      
       <h2 id="provenance">Topic Session: Provenance</h2>
       <p><a href="graphics/05_Provenance.jpg"><img alt="" src="graphics/05_Provenance_web.jpg" width="1000" height="454"></a></p>
       <p>The session on provenance addressed various aspects of asset management, legal frameworks, and managing resources via the blockchain.</p>
-      <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
+      <!-- <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p> -->
     </section>
 
     <section>      
@@ -400,7 +400,7 @@
       <p><a href="graphics/06_Primitives_Sink.jpg"><img alt="" src="graphics/06_Primitives_Sink_web.jpg" width="1000" height="463"></a></p>
       <p>The final breakout session included many different topics, ranging from blockchain primitives to Internet of Things</p>
       <p>Notably, Arnaud Le Hors, IBM's representative on the Hyperledger project, cautioned that bacause the blockchain landscape is still under rapid development, any related Web standards should be at the component level and should keep pace with implementations.</p>
-      <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p>
+      <!-- <p class="todo"><b>TODO:</b> add detailed technical summary and transcription</p> -->
     </section>
 
     <section>      
@@ -424,6 +424,17 @@
           <li>Begin discussions with Edge and Samsung browser teams about an experimental prototype</li>
           <li>Investigate required spec additions to leverage blockchain identities with WebAuth</li>
         </ul>
+        <p><b>post-workshop progress report:</b></p> 
+
+        <blockquote>
+          <p>Once the first version of the open source blockchain identity layer is up on Azure (release imminent), we can turn our attention to experimenting with cross-org integrations and standards. One high-value standard is the augmentation of the Web Auth spec to allow users to login via blockchain identity keys. The Web Auth flow is not far off from the exiting blockchain identity verification flow, so this should be less difficult than most of the blockchain-centric browser integrations discussed at the W3C blockchain event.</p>
+
+          <p>I will be meeting with the Samsung folks just as soon as we have the new version of the identity registration/resolution layer (Blockstack) up on Azure. From there we can determine timelines and a more precise plan for the work required to do this.</p>
+
+          <p>We're moving to finalize a public, open foundation that will serve as a hub for development of the open source blockchain-based identity components we need to support the ecosystem. The intent is to welcome any and all developers, groups, and organizations (including those listed here) to participate in transparent collaboration toward a common goal. We'll have more public information available in September.</p>
+          <footer>– Daniel Buchner (Microsoft)</footer>
+        </blockquote>
+        
       </article>
 
       <article class="commitment">
@@ -449,6 +460,42 @@
           <li>Formalize Tendermint SPV (Simple Payment Verification)</li>
           <li>Generalize to others (maybe using IPLD, DEX, etc.)</li>
         </ul>
+        <p><b>post-workshop progress reports:</b></p> 
+
+        <blockquote>
+          <p>Proof-of-Existence is a general method in blockchains for proving the existence of a transaction in the blockchain, or even the value of the blockchain application state.  As an example in the former case, proof-of-existence can be used to prove the existence of an unspent transaction output (UTXO) in Bitcoin, but it cannot be used to prove that the transaction had not been spent.  As an example in the latter case, proof-of-existence can be used for blockchain applications that support Merkle-ized search trees (such as Ethereum's Patricia Trie) to prove the current value of a key.  The goal is to create a standardize proof-of-existence data structure that works for all popular consensus systems and all popular Merkle-ized search trees.</p>
+
+          <p>The consensus systems to support:</p>
+          <ul>
+            <li>Proof-of-work</li>
+            <li>Tendermint BFT</li>
+            <li>other?</li>
+          </ul>
+
+          <p>The Merkle-ized search trees:</p>
+          <ul>
+            <li>Bitcoin's UTXO Merkle tree</li>
+            <li>Ethereum's Patricia Trie</li>
+            <li>Tendermint's IAVL Tree and Simple Tree</li>
+            <li>IPLD</li>
+          </ul>
+
+          <p>The resulting data structure includes both a proof of block-hash along with a Merkle proof to the transaction or key-value pair that Merkle-izes to the aforementioned block-hash.</p>
+
+          <p>Some of the formalization is already done for Atom (a proposed blockchain staking token), via 
+          <a href="https://github.com/gnuclear/atom-whitepaper/blob/master/WHITEPAPER.md#inter-blockchain-communication-ibc">Inter-blockchain Communication (IBC)</a>, which is about using proof-of-existence between two Tendermint ledgers.</p>
+          <footer>– Jae Kwon (Tendermint)</footer>
+        </blockquote>
+
+
+        <blockquote>
+          <p>We're just a few days away from launching Chainpoint 2.0.  We're going to publish the updated information to <a href="http://github.com/chainpoint">http://github.com/chainpoint</a>.  We're also going to launch <a href="http://Chainpoint.org">Chainpoint.org</a>.  Some tools that support the standard exist at <a href="http://github.com/tierion">http://github.com/tierion</a>.</p>
+
+          <p>For several months we've been working on Chainpoint 2.0 with Manu Spoorny of the W3C Verifiable Claims Workgroup as well as Christopher Allen.</p>
+
+          <p>Chainpoint is a standard for anchoring data to the blockchain and generating blockchain receipts.  Each receipt contains the information needed to verify the data without relying on a trusted third party.  Our mission is to transform the blockchain into a global platform for verifying the integrity and authenticity of any data, file, or business process.</p>
+          <footer>– Wayne Vaughan (Tierion)</footer>
+        </blockquote>
       </article>
 
       <article class="commitment">
@@ -463,14 +510,14 @@
           <li>Figure out working group home and trajectory (involve IETF?)</li>
         </ul>
       </article>
-
+      
       <h3>Needs Further Discussion</h3>
       <p>These were promising ideas that the group felt need further conversation to see if they can be developed into specifications, including identifying related or competing work and finding points of integration.</p>    
 
       <article class="commitment">
         <h4 id="digital-assets">Digital Assets</h4>
         <p><b>contributors:</b> Kenji Saito (Keio University, BlockchainHub Inc), Tarique A. Bhuiyan (Hashkloud)</p>
-        <p><b>summary:</b> </p>
+        <p><b>post-workshop progress reports:</b> see the <a href="https://www.w3.org/community/digital-asset/">Blockchain Digital Assets Community Group</a></p> 
       </article>
 
       <article class="commitment">
@@ -481,6 +528,21 @@
           <li>Identify existing standards</li>
           <li>Discuss use cases</li>
         </ul>
+
+        <blockquote>
+          <p>Blockchain key management outside browser is related to the <a href="https://www.w3.org/2016/04/blockchain-workshop/interest/blocko.html">position statement</a> I submitted.</p>
+
+          <p>I'm looking into a key-management scheme for blockchain built upon existing FIDO or <a href="https://www.w3.org/TR/webauthn/">Web Authentication</a> authenticator model (<a href="https://www.w3.org/TR/webauthn/#authenticator-model">https://www.w3.org/TR/webauthn/#authenticator-model</a>.)</p>
+
+          <p>Since Web Auth authenticators are used for safe-keeping private keys and generating signatures, the same design and principles can facilitate interactions between user owned-private keys and blockchain-based services.</p>
+
+          <p>I'm working with FIDO solution providers (including Samsung) to design and demonstrate the scheme leveraging their own FIDO authenticator implementations.</p>
+
+          <p>After we get some results, I would like to publish my designs and ideas on blockchain community group to gather traction.</p>
+
+          <p>I'm expecting Mountie Lee to help me in the process.</p>
+          <footer>– Won-Beom Kim 김원범 (Blocko Inc)</footer>
+        </blockquote>
       </article>
 
       <article class="commitment">
@@ -515,6 +577,14 @@
           <li>Blockchain receipts</li>
           <li>OAuth2/ UMA Auth</li>
         </ul>
+
+        <blockquote>
+          <p>Standards for Self-Sovereign Support Technology Discussion</p>
+
+          <p>A standards-based personal agent combines emerging W3C, blockchain, and OAuth standards in a way that can be owned and completely controlled by a single individual. WebAuthn and Verified Claims, Blockchain ID and Blockchain transaction receipts, and an OAuth-based personal authorization server will be integrated in an example high-value transaction such as a physician writing a prescription. Some details are in the short white paper, <a href="https://docs.google.com/document/d/1zSWyXpAwCbQwkCgmbfxjpZ-QPYEwpxNfyt6mnosgNAU/edit?pref=2&pli=1">Self-Sovereign Support Technologies and Decentralized ID</a></p>
+
+          <footer>– Adrian Gropper (HealthURL)</footer>
+        </blockquote>
       </article>
 
       <article class="commitment">
@@ -526,12 +596,23 @@
           <li>Draft vocabulary?</li>
           <li>Initial scoping – ID subvocabs</li>
         </ul>
+
+        <blockquote>
+          <p>My take on the goal is to document a common data model and data vocabulary for a large subset of Blockchain technologies. Provide one or more syntaxes for expressing this data model so that it will be possible for Blockchains to enable reads and writes via standards-track messages and protocols.</p>
+
+          <p>We are working on a <a href="https://web-payments.github.io/flex-ledger/vocabulary.html">draft vocabulary</a> in the Web Payments Community Group, and a <a href="https://web-payments.github.io/flex-ledger/">data model spec</a>.</p>
+
+          <p>There is also <a href="https://docs.google.com/presentation/d/14YrP83WhS3G3MLFhxLy02sR1wlcnbdUZwYlqLkJ5B1E/edit?usp=drive_web">this presentation from the Blockchain workshop.</a></p>
+
+          <p>But, that's only one of the potential inputs and I hesitate to distribute this stuff that broadly to make sure that people don't think that the stuff above is exactly what we'll be working on as a group. We still haven't convened to figure that out.</p>
+
+          <footer>– Manu Sporny (Digital Bazaar)</footer>
+        </blockquote>
       </article>
 
       <article class="commitment">
         <h4 id="standardize-interface-of-consensus-logic">Standardize Interface of Consensus Logic</h4>
         <p><b>contributors:</b> Ethan Buchman (Tendermint)</p>
-        <p><b>summary:</b> </p>
       </article>
 
       <h3>Elsewhere</h3>
@@ -540,7 +621,7 @@
       <article class="commitment">
         <h4 id="interledger">Interledger</h4>
         <p><b>contributors:</b> Adrian Hope-Bailie (Ripple), Evan Schwartz (Ripple)</p>
-        <p><b>summary:</b> </p>
+        <p><b>post-workshop progress reports:</b> see the <a href="https://www.w3.org/community/interledger/">Interledger Payments Community Group</a></p> 
       </article>
 
       <p>Note that there were many other topics discussed at the workshop, and this session focused only on those topics that participants proposed as possible standards.</p>
@@ -568,18 +649,24 @@
     <section>      
       <h2 id="conclusions">Conclusions</h2>
       <p>Feedback has been very positive, and we expect to continue the conversation and consider various efforts toward incubation.</p>
-      <p>We encourage interested people and organizations to join the <a href="https://www.w3.org/community/blockchain/">W3C Blockchain Community Group</a> to keep informed about future developments. We are expanding the scope of that group to include coordination for our various activities around blockchains, including links to related specific-topic community groups, such as the new <a href="https://www.w3.org/community/digital-asset/">Blockchain Digital Assets Community Group</a>that was formed as a result of the workshop.</p>
-      <p>For more consideration on next steps, see the blog post, <a href="">“Building Blocks to Blockchains.”</a></p>
-<!--       <p class="todo"><b>TODO:</b> add detailed summary of next steps</p>
- -->    </section>
+      <p>We encourage interested people and organizations to join the <a href="https://www.w3.org/community/blockchain/">W3C Blockchain Community Group</a> to keep informed about future developments. We are expanding the scope of that group to include coordination for our various activities around blockchains, including links to related specific-topic community groups, such as the new <a href="https://www.w3.org/community/digital-asset/">Blockchain Digital Assets Community Group</a> that was formed as a result of the workshop.</p>
+      <p>For more consideration on next steps, see the blog post, <a href="https://www.w3.org/blog/2016/08/building-blocks-to-blockchains">“Building Blocks to Blockchains”.</a></p>
+    </section>
+
 
     <section>      
       <h2 id="press">Press</h2>
       <p>Journalists reported on this workshop in the following news articles:</p>
       <ul>
         <li><a href="http://www.coindesk.com/w3c-events-industry-begins-long-road-blockchain-standards/">“At W3C Event, Industry Seeks to Weave Blockchains into New Web“</a> by Bailey Reutzel, published on CoinDesk.com, on 5 July 2016</li>
+
+        <li><a href="http://www.cio.com/article/3089459/consumer-electronics/mit-hosts-the-w3c-blockchain-interoperability-workshop.html">“MIT hosts the W3C blockchain interoperability workshop“</a> by Peter B. Nichol, published on CIO.com, on 29 June 2016</li>
+
         <li><a href="http://www.cio.com/article/3090143/security/highlights-from-the-w3c-blockchain-workshop-at-mit.html">“Highlights from the W3C blockchain workshop at MIT“</a> by Peter B. Nichol, published on CIO.com, on 30 June 2016</li>
-        <li><a href="http://www.americanbanker.com/news/bank-technology/why-standards-would-aid-blockchains-adoption-1090219-1.html?zkPrintable=1&nopagination=1">“Why Standards Would Aid Blockchain's Adoption”</a> by Bailey Reutzel, published on AmricanBanker.com, on 15 July 2016</li>
+
+        <li><a href="https://bitcoinmagazine.com/articles/the-w-c-and-mit-media-lab-host-first-blockchain-and-the-web-workshop-1467989496">“The W3C and MIT Media Lab Host First ‘Blockchain and the Web’ Workshop”</a> by Giulio Prisco, published on Bitcoin Magazine, on 08 July 2016</li>
+
+        <li><a href="http://www.americanbanker.com/news/bank-technology/why-standards-would-aid-blockchains-adoption-1090219-1.html?zkPrintable=1&nopagination=1">“Why Standards Would Aid Blockchain's Adoption”</a> by Bailey Reutzel, published on AmericanBanker.com, on 15 July 2016</li>
       </ul>
     </section>
     
